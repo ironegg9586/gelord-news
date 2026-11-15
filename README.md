@@ -104,10 +104,21 @@ Limits on iPhone and iPad (these come from iOS, not from the app):
 
 ## Phone alerts with ntfy
 
-1. Install the free ntfy app on your phone.
-2. Open **Settings** in the app and tap **Copy** next to *Your ntfy topic* (the server makes a random one for you the first time it starts).
-3. In the ntfy app, tap **+** (subscribe) and paste that topic. Keep the server as `ntfy.sh`.
-4. Back in Settings, turn on **Phone notifications** and press **Send test**. You should get a test alert.
+ntfy is a free service that sends alerts to your phone. No account is needed. Tap [ntfy.sh](https://ntfy.sh) to read more about it, or see the official [ntfy phone subscribe guide](https://docs.ntfy.sh/subscribe/phone/).
+
+1. **Install the free ntfy app** (tap the link for your phone):
+   1. Android: [Google Play](https://play.google.com/store/apps/details?id=io.heckel.ntfy)
+   2. Android: [F-Droid](https://f-droid.org/en/packages/io.heckel.ntfy/)
+   3. iPhone and iPad: [App Store](https://apps.apple.com/us/app/ntfy/id1625396347)
+2. **Copy your topic.** Open MyNews **Settings** (⚙️) and tap **Copy** next to *Your ntfy topic*. The server makes a random one for you the first time it starts. It looks like `gelordnews-xxxxxxxxxxxx`.
+3. **Subscribe in the ntfy app.** Tap **+** (subscribe), paste the topic, and keep the server as `ntfy.sh`. Then tap **Subscribe**.
+4. **Turn alerts on.** Back in MyNews Settings, turn on **Phone notifications** and tap **Send test**. You should get a test alert within a few seconds.
+5. **How an alert looks.** The title is the topic name and "needs attention". The text is the headline, its source and how long ago it was posted. Tap the alert to open the article.
+6. **How often alerts come.**
+   1. Alerts are only sent for new stories with the ⚠️ *Needs attention* badge. Normal stories never send an alert, and the same story is never sent twice.
+   2. The server checks for news every 15, 30 or 60 minutes (you choose in Settings).
+   3. Each check sends at most 1, 3, 5 or 10 alerts per topic (you choose in Settings). Extra stories wait for the next check.
+   4. Alerts are only sent while the server is running.
 
 ## Privacy
 

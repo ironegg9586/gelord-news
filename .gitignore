@@ -1,0 +1,11 @@
+# Private or runtime files - never publish
+settings.json
+seen.json
+topics.json
+server.log
+server.pid
+__pycache__/
+*.bak*
+*.tmp
+*ntfy*topic*
+ntfy_topic*

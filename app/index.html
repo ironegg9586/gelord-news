@@ -1,0 +1,1600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gelord x News</title>
+<meta name="theme-color" content="#0b0f19" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+<!-- Site icon = the Gelord app icon (copy kept in icon.svg). Inlined because the server only serves the page itself. -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2I4ZmU2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWY1ZmIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOSIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGQ9Ik0xNiA1IDI1IDguNnY2LjZjMCA1LjctMy44IDkuOC05IDExLjMtNS4yLTEuNS05LTUuNi05LTExLjNWOC42eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xOS40IDEyLjlhNC40IDQuNCAwIDEgMCAuOSAzLjloLTMuNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBjeD0iMTYuNSIgY3k9IjE2LjgiIHI9IjEuNCIgZmlsbD0iI2ZmZDE2NiIvPjwvc3ZnPgo=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAABmJLR0QA/wD/AP+gvaeTAAAgAElEQVR4nO2deXzc1Ln3f9Lsu8fj8RY7dhJnc0jISlJI2EpKSlgaEijwQkN72wKXe7twaUtL++nGp7elb1vovb2lXFr6tkApISFQoGxhTyCJY8iCs9vZHCfeZvF4Vknn/UP2WNJopBl7NJ5x5vchaKQ5OueR5utHR2d5DtWwfjPGQxRF6QxGndGkN5l0RpPeYKT0OprWgaJpiqJ0OukJhJDUXGSOEQJAepgg5SBJ7hNxMvFHknKaNOVQIhnrUs0j6WzmOMJyAOE4jnAsxzAME+fiDMckOCYhl3U+pM9nYRRF6c0Wk81htNmNFhtF09JbJffDAhOcDAAURVN6GgA1fNCYNJyATcSYaISJRRKxmFwOWikfcFA0bXI4LS630WanaR0wcpdLZIhLlDlIUdAbTXqjEXARjktEo4nwYDwazgMl2sJhsFgtrnJLWRmtExRUIkPOPFkyJMVTFG2wWA0Wq4WwiUgkEQ4lolEZA3IkjeCgzA6n3VttsFhTbyi/KZEhLjGtzXJmEYqijVab0Wpj4/FYKJiIDGrhR3INB0VZXW6bt1pvNAEokaEFGcIvdQaj1V3BOV2x0EAsFJK/k6NVLuEwO1zOmjqdwTh8oESGtmQkP9E6vcXlNtkcYb+PiUVkbBuVcgOHzmBwVNVaysrlbz1KZMiblxMykp8ovd7m8SaikWjAx7GMjJFZaqxwUBRl81Q6qqpB0SUyRGfnl4zk3TCYzXpTdWwgGAsNjPEpMyY4aL3eXddgsjvFv1OJjHEjg99QFGV2uvRmc8TXx7GsjM2ZiR71mSab3TttVokMGTvGlYyk9AaTvaJSbzLLmJ2ZRuU5KDi81Y7KaoAqkSE9uzDI4L+gaJ2t3BMbGIiGgjL2qylrOCiKctbW29wesWWyxqFExjiSMbxDGR1OSqePBvuzbQvJDg6KosrqGi2uMqkBJTLS2CwuMa3NmpEx9MlgtYKmov5+2ZudTlnUOSha52lsKpFRdGTwNhtMZqu7gqKy+MUzTUrRtKdhqtFmVzBAsFcio7DI4Lc6o9Hq9iR7flWVERwURZXVNZTIKGoyeOmMRkuZh8qMjwzgoOCqrbc4S0+ToieDl8FoMjnKUo+nSh0Oh7faWno3mShk8AeNFiv/HFCWChwmm93urVYwQLBXIqM4yOCTmeyO4Z7ztFKCg9bry+oaKarU0pVydpGTAQCgzC63zFhdgRTgoNx1jTqDoUSG9OyJQAYAUDRlcZQp1E3TwmGvqDTZHecOGQYd1VRpaqo0GXTJQb4TmQzeCJ3RaLDaZE4BkK6FVGcwOCqrzxEy5tVbrl/kvqLZYTbQAKIJ7o22gU27+nefCEvPnlhk8DLaHEwsKtt5S8nOWymfPNXkdE1sMuwm+jNznOuWuGdUyfdbHu+NvfCxf3Orzx9mJyoZvJhYJBLwp54tA4fJ7ixvnDaByZhdY16zyP3ZuU6LQf1NPs6Qdw4ObGrp39ERSr3mCUAG/33E72PiMckXKXBQVOX05gk5DlTVVSjrWG/shY/8m1v7/WF2gpEBApZlw/29kuRSOKxuj6t2cqoBgr3iI2N2jSlzV6GsOEPeORjc1NK/o33IkUwAMvjD0YEAExUNThZVSCmKsnsqUw0Q7BUTGU6T7qp5zusXlU31qrT2ZC6jnlo5x7Vyjutod3RTS/+Lu/3BiNSRpDercMkAYLTamGhUeJ7Ic1hc5WV1DWmMS7GlgMmYXWNes7AsJ65CWbwj2djSt+OoXI0E8tYXIBn8wVgwkIiNTKETeA4KNm9lGuNSbClIMoZqFYvdM6py5iqUlXQkx3pjL7T2P7fL5w8zRUoGAIPNKoRjxHMYbXZP4/QiJSNvrkJZcYa8cyCwsaV/R/sA4YqMDH4bCfSziQS/N+I5LK7yoiPDbqJXznHk01Uoy6inVp5XtvK8smO9sedb+59r6feHEyNfFzwZAAwmSxKOIc9BUVTlzPNoYTdMYZNxfr1lzcKyK5odJn3GA5vUxLAEgF6XswxjCe61ff6NLX0fHx8sCjIAEMKF+3v533MIDrOrzF3XmHJKwZFhN9Erm503LC6bnlNX0R1MvLwn8MyOvgRLrpnvXrvYPcltVD8tYx3rjT2/q0/iSAqQDH4nOhBgYjEk4XBPnmJ2uMRJC4uM2TXmNQtcq3Jaq+A4svNYeNOu/i37BziWSx6nKSyZYr9+sfuyWc4cOhK+RvLsjt4d7QMcKVAyADDxWDQYAA8HRVFVs+ZSNC1IWihk2E3UyjnOGxZp4io27Ow/E0iQNDYD8Nj01yxwr11croUj2dTS5x9MiL4oADIIAI6EfT2EgGpYv9lotXmmTBckLQgyZteY1yxwauQq3tw/wHHDdqn1qFEUlky1r11cnnNH8vZ+/8advduPDhBSMGQQAIgEfVwiQTWs32z3VjkqawqEDLuRXjnHkXtXMcC8vNvPuwqRHdn0tXps+msXuK9f4qnLsSOJPt/St6ml1z/IiAsdHzIAxMMDiUiEali/2dPYZLTaZWzJLxmza8xr5rtWzXXk0lUQ7OwY3LTL9+b+IO8qRHaMqheeTjqS2a7cO5IdvR8eDQ7ZNU5kAIRNJKJBP9V4+/NVM+eOY9RHm4la2ayNq9jj37DTdyaQ0GhMl8euv3ZB+fWLPXXlOXUkPdHNu/o27exJOhJBsfkggz813NdLTfvKP71Ns8eFjFk1pjULXKvO08xVpPn7ywkZ/JYMO5J1SzxaOJJnt/dsT3EkWpPBK+zvo2bc/Wb55Cn5JMNuolc2O9YtcmnoKtKbl1syhEcq7IZrFrjXLqnIvSNp6U06kvyQASAaDFDN92x1VNWmniJVLsioduq/fLHnyjk5bdbkyLsHQ5t2+ba3hzhJuXkkI/mRprCsybF2ieeSWbl0JLEE9/LH/b9/o7PLHx8pTzMyQBAPh6i597XwE9qQklyQNAdkLJ9u+9maGrMhZ/frtD+xudX/wkf+nlBC5uvxIEP4qcJhuG5R+fWLK3LYRhJNcPc+efSd/X6tyQDARMPU/B/sNdntSEkuSJoDMurdhie+MjkndQveVTzX6tvePshxMjdJ1rw8kzFc4pAjWXdBRa4cSSTOrXto34leSeDiHJMBEDYR1w91tmlcz7jtU+6xkzHkKj7294YYPucCJwMAR8i2w8Fth4MVDsPnFnmuXzJWR2Ix0l+8pObHGzuk5uWUDACgKD2to7UmA8DSqVaZ/DOTyFUkSykGMoQHewcSj7115k9vdy2b7lx3gXcsjuTCGU6pebkmgwCgKD0oWmsyALito4lMN+wqAr0haR9EcZGR/IIj2HYouO1QsMJhuG6xZ+2SiknurF/Zyu0GyYXkngzwnoOW8/a5bumis/kj4Qhajg1uavW/2TbApRZQtGQI93p4R/JW1wXTnOuWei9vLsvckQyHXtGSDIAGpUdqlBftetTU1D3A/HNvYEOL/0wgke4uTwAykjZzwIdHgh8eCVY4DNcu9Kxb6q0rz9CRaEsGCEDRekoCx3iQwXDk3UOh51r9I7WKc4AMYaregcSf3jnz53e6lk13rVvqvXR2Bo5EUzIAgIifKePkM3Z0hL+9ofODo+coGcmDHMG2Q4Fv/vXIh0fUYspqTwZEIRjyMaYrA52rZMhlkVZ5IAMjcJTIEH9ZyGRITk4pQ1D8GMjAEBwlMsRflsjgRedthLCKSmTIlacobckAQJfIKDgyMmJDczJASErDZf7JkE2ZFzLsZt1Ur6mxwuRx6Mtter73J8ESf5jxDTIn+2PtZ6PDo0MKiozUMgTF54gMIo0Jdg6QYTLQy6c7ljXZF0+xN1aotzj5w0zrsdDO9tBbbYEzgfi5QwZEcGhHRpbXrBEZ8+tt6y4ov3SWy2bKon+4zKq/vLns8uayb62u230itLml/5+7fTFGHF5tIpKBETgmNBmXzHT+y8WVc+tH3zMMgKawoMG+oMH+jVW1T33Q88T7Z8NxLmmK2AJ5m4UH1cjIzulqQQaG4Ji4ZDRPMt9zZe2ixrShNkcht01/9xU1Ny2reGTLmWe393ATlAwA+jyQkZHHzDUZRj31r5dX3XZhBZ1Vj3DG8tgN919Xv3q++0cbj3f0RDHhyIBcBOPxICNdstGS0eAxPXVn0/rlXo3ISGp+g/3pf5+9ekF5LsnI8IZpTAaIpONtnMiQ12jJWDHD8cQd06ZVjn7JzKxkNtA/u3HKfdfU0zSVEzIyvGVakwGx55gIZKw+v+w3tzTYzUqLAWihWy6sfPCmKYbUfvaiJQMCOCYCGWsWlf/k+nqdxo+SdPrMXPdvbmsSjcPQhgxxjlqRgWE4NCYjK05GS8als5zfv6Z2nMAY0sWzXD9Z1zg0fEo7MiTnSvdyQwYA/cQgo3mS5ec31Gdb/fSHmR1HQ7tPDB45G+kOJvxhhuWIw6L32PSNXvPsWssFUx3TsoyFffUCT3t39LE3TwsMFZidERlZPFtS9nJGBgB9XsjI7GpHS4bDrHvwxsmmjOfFcARv7Q9s3NG7/WiIFcRf4nMLhNlTfbHdJ0LP7wKAxgrztQvL1y6pKLNlOoD+K5fVbPiwOxBmipoMAPpiJwPA96+tzXym0Ja2wH+9dvpYT3KFAPElpdh8rDf621dPP/pm163LK790SbXNpF7VtRjpZU3OV/b0i8zOiozs3O3IJodkEEh7ZceJDBnLMiXjkpmOz5yX0UKYPQOJn2w++d7BoOyFyJKR/CKaII+9debF1v4frm24cLoTaqp0CWEtSjJAxK+yqRkWOBkmA3Xf1ZMyyfOj44M3/e7g6MhI7nUF4v/6+OFHtnTJNmcI5RuJBFesZED4KpuaYYGTAZAbL/BUuwwpiaV672DwzseP9oWYsZDBf+II/uf1zp88d1wa7kEghiXbh4aPFzEZSL7KpmaYSzIyvuasyLAY6S8u96rmuaM99B9/64gxaTrIlGyWPYEA2Lij5xf/OJGuxKe2dXcHE8VOBgBacutHEkkLGj0ZWQx8y2Z8xup5brfaG8TJ/tg9T3XEGSJ7IaMjg9fftnX/+uVTXIoDeW1P/0P/PDk2MjLERFsyMNxln5JIWlDBkQGCzy/1pKQXieXId54+HoqyOSeD15/fPbPjSPCWiyrnTrbraKqjO7K5pfeNfb6JQQZApK+y40IGkDUZs2stTWrNU09s7Wk7HdaIDP5gW+fg95/pSHcLJReSIRlZ0CH6lGMyIOmyHzcyZKREBoCVc1yp5wg1EGX/+O5ZTcmQz2LsZGRw2/JABoSvskVEBoCLZ6k0Njy5rScYTo70nFBkpOSkCRlIeo7iIqPMqp/qVXqmMCx5dkefxEqUyJBmoDLaiEaxkQFgfoM1NaqIUC0dod6B8Z1vMhYyMn+uaEgGADofZKg2KMoZl44MANPVqqLvHBhugxJmPWHISJcyp2RAMMtersiCJAMgDR6VyUi7joVKZPAH5c7MiAwyFLxFezJkLU9qeHRMSskp5fD7NWVKfbAcRzq6R1ZWLkYylMelyM4XyDkZEHfZa+gzYgwxpe8DMempzMkA4LQo9ZufDSYSrMDQbMgw0cwcT3elORLldKcGnEcCbuGF5M1nmI1KY1OicU60rw0ZEEyH1PZpEklwCr9oMn5tJmSAqMDhEy5pkzEZtdaBu+buurKh3awbWcji9KD9/+2fu+HwbIaj09xAcTY5eZoQWIxKFxiJCyZjakYGyBAc2pIBICKBXSyzgYbkRqYng6h5XX4F0KzIuLj2xC8u3GIzSGOo19pC3138waqG9m+8u7I/ah45SUsyMHxD0mkEDi3JAD+GVJIeaS9zlGQQIJqQSzkss4EWGaVIBgBGiTQY9FRWZCz0dv1mxesGWjw3WqAF3rNv3Px2t/frhEpfERbdRRKMsCd6o//Y1fPufr9M8YpkAMSq4jn4ObrakgHxLPuURGKLVQuUNY4AIETkCVNkMQpqpGpkAHxuaaswbps+nc2pP4tFn/jl8i0KZPAyxE9Nir2K2huUkwk1p8722fmeVz7u+97TR+MMlzkZUKtzROJsHshA6qusFmRAzXM4zTqDTqYcWTIA9A6krG8lkNdhMOlTYnan+VlunNbmNYcVchtR39tg1CJApmjVfM+910zOigyDnnZYlIYiROJyI41yTQYkr7IakQGgZ0BuSZRh0TRV5TJkSIZqbjqaapKsAZXuZyFk5eRjClmJM2EQ3J1pYoFu+lTVpHJThmQQoNZtUq5UdQfj0kMakAGAzgMZALr8Sj8ngEnSpou0ZABo75asNiLVwil2iSkp+Q6ZN9Pdq5yVSJFTWSQeFk1TK2a5MyQDQJ1aE19nn/jytSEDMh1vKRYrFyhrHEk52OlPgV0s8dwCJTJAcOB0BIpaMVO49HpaMsw6xqRTqW2IxIaySCxQhUO8zoHUIJGVtW6VzoHOfgEcmpEBIul4S7FYuUBZ41LJANDpU4GjdsRzqJAB4JPOsML4XgBLptgrnQZlMgBEWX2UzWatD51dPY2cUnsBBXtSK1Vj459Keg4tyYCo4y3FYuUCZY2TJQMgp9XgmOI1SYxLRwYA32DiYJdSLZKmqRsu8CqTweugr1zZMJEs9VkkFmj7kUCGZACYWmVRzm3Ic2hMBqTBW7QhA0BPMBFn5DIZ1rx6a4Zk8J+2HR5QyA3ATZ/yJhtS05EB4PUTU5XzGRGlh3NepokFOtkXbT8rRjk9GQCZ1+BQyC3OcD3BeB7IIKJVEzQjAwQcQXuPUi2ywmGo5meJZUAGgFf3+BRyA+C06O78dC0UyQCw4fDMnkhmEcMqLoVefa5bql7b0yfaVySjzmOucCh1Kx7uCqcOeYcGZCClnUMTMnjtPanSnDCv3pohGQAOnokc7FKplt78Ke/5DcO1hDR9rRHGcO97lyU4lRmwCWNdp2HVqb6Y8L+zAZVnJV/sczu6Bfsjm1QyAJyv6DYA7D4m09aiBRkQT03QkAwC7D0VueECmfySOq/O+upev9QS2WoDAIJntvf+4HNKlQCapv7z8403/+6AX3Hh2dae6q+/e8WDF71lN8j/2K3d1d985+K+aJvwZAA/Xjd17dJKpUsCWtqDI+MH1MgAoPxMAbD7uPR5qhEZELRzaEsGgL2nBmUyFGjxUONERmQA+EdrX69iaxiASW7TQ/9nmkw/lrgX/r3O+s+9uHbT0RkRRtQqfyrkeGDHhV967bN9UeHrJQFw+yU1qmQA+N8tw00jGZABYMk0lVH1e46LPId2ZACpvbJpCgTGRAZAjvfFAhHWlb63fXatZZLbMPLSq0gGQGIM+fN7Z++9qi5dhrwWTrH/dn3TN/5yJJzsGZYbn3E2bP3hByt+tuPC5vLeSutgjNWfHHAcDZSl3AsC4NYV1f+xukG5XAB7TgxsPegXlKRCRq3bNLNWqQLkH0wc7xGOY9KQDBDI9EFoQQYAwuGTTpVqx8Wixiu5T+Ib+vQHPSf6kpE20mpZk/NPd8yqGqrwpnWVAGKs7qOeqlePT337VL0sGTRN3Xt1w33XNiqPcObL+eULxwUlqZAB4PK5HuVs9xwfIMLfUksykPoqqxEZ/P8+PKLSwnhZs0t4pjIZABIsefDFjJq0mydZN3y9+YrhSB7pbqCo3JQbVu8x//nO5tsvqcmkxBd29bR2BIU2K5MB4Iq5KhM8tx7wjVisMRmQvMpqSgaAt9oCMvkLtKjR5hqJEqlCBr/33gH/5l3id8U0KrPqf31r0+++OGN6jTAIekZkOCy6f7uyfvO98xZOUakw8jobiP/yhWNZkeGy6BZNVXlVfnNfH/JFBgSB8TUnA8ApX/zwmej06rR9Bzqa+uz57qc/7M2QDP7fg/84uXiKPcMVWVfMcl0007X1YOCZD7u3HfbHpTVaKRkzaqxrllSsWVKZeWxTjuC7Tx32hUaazFXJACHXLK5UDpJ5oDN0qi+aNzKQfJXNAxn8wbf2BxTgAPD5ZRV/395DhLkokgFgMMZ+7S9H/3rXzEwCdgGgKayY5VoxyxWKsjvbg7uPhzq6o13++EAkAcCgo6vKjPUe09x6+wXTnJMyXQV4RA+/fHz74YDUynQXAvAjd268UOVptWVvXz7JAD/6PG9kAHhrf+Crl1XJFDesKV7zwkb7ro4QMiOD/3TkbOS+pzseum1aVhFq7WbdZc3uy5rdmZ+iqo3bzz62pVPeSiAdGcumlzVVq6z48cae3nySAZmOt2GLZawYMxkADnZFVHtob1xagWzI4PXOfv+3nmpnlbtrNdaru/t+vKEdQFZkAPj8RSpu41Rf9ECnpDqvLRkgMqsmaEgGCDiC51pU6o+XN5d5nYasyODNe2Of77tPdyj38Gmnl1p7v/XXQ8nAppmTUV1mUn1P2fCBJEqd5mQQmSU1tCSD/7SxpU/59zPoqK9eWi1rsQIZvF7Z03/nnw4FI9kM4RmzCMEf3jj1nSdHQwaAuz4zWXnl+gRLnv3gjPDk1CxzTgZS17KXmJVzMgDiG2S2tPmhqDWLPfXl4s7JDMjg1dI+8PnffrLvpEprfa40EGG+9cSh3758ggxbmBUZk8rNa5YqVcIAvPJRT99A8lmcJzIgWcteeglyB8dIBr/ZsENl5KZeR3318mqJKSn5ypoHENLZH/vC7/c/+ubp5LxIjbTjSGDNr3b/86Pe9FYqkQHga1c1yCzEIdbf3j8tyjQvZEC4lr3EIO3IANDaMXjkrMog4avnl0/lF9TJkgx+m2DJf73aecPDn2w/mvV8gkzUHYx/+8lDX3rkk67+WNKubMloqrauXqgSLfPg6cHW9pEX47yRAUBXc+ndeSaD/xiOc5c3K/VAUhTVVGX5R2vfKMhIfucbZF7Y1dvaMVDnMdWUZd1iIauzgfh/v3Lie08f2X9qUHiXsyWDovCrL8yaXKEyKPDnzx09dHow/2RAdgHAPJAB4OWP+76w3DujWunWLJ5iv26RZ3NLrzSXLKMkbD8S3H4kOHuS9cZlVavOLx/dOk4cwfbDgY3bz27Z1x9nkouGYnRkAFi7tHrZDJWo7Ue6Bl/e1T0uZACgFv5wn/Rc7cngP10xp+z/3jIlpSyRAmFmzW/a+kKCGXNji59h0FFLpjovbi5b0OiYWWNVbTQ77YvtPh56/4Dv3f2+fuGgobGRUeE0vnTfIqdVZez7vz32yRt7elKzzAMZkKxln08yAGxp87d1hpsnKbUMuqz6b19d9+2nO5IWyyTKJn5GgiFbDwW2HgoAsBjpRq+53mOqdZtsJp3NpCMEDEdCEeZMIH7aF2s/G+kPZTGrQCYlZMgAcP/1U1XJ2HdiYMvecSMDwonUeSYDAEfw3693/c/t01IKFWnV+eVbDwef39U3djIkhyNxdn/n4P7OwdS7LPuzi/dGT8bVC72r5qtHbf/Nix2EjBsZEMx4yzcZ/K3deii49ZD628T9101ukl0KdAxkpF6YwC4NyZhRY/3pTTNSDkv1blv/1gP940gGhkNNjg8Z/Mefbj4RVgztAsBsoB+6bZpd0ulahGRYjfSvb5+tHGEBQDTO/nTD4fElAwA9vmQA6PLHf/9GV4oBUk2uMP9wbcPIKLoiJIMCeeDmGdOqVHpfATz80rGTvaKJF/knAwA9vmTwemJbd5va8FIAV84r/9qVdUBRkgFC7rl6ymcXqFc1DnSG/vK2aOzjuJBBZNeyly9XJsPckAGAY8mPNh5jMmjq/pdLq29bXimTRcGTcfPy2i9foT7VluXI9548KBx4MF5kIHUte/lyZTLMGRn8Fwe7Io9sUX+4ALh39eRrFlYUFxlXLfR+f11T6jepeviljraTI9OWxpEMIP0CgPkkg//4x7e73j+oMgIZAEXhR+saL52dbFssdDI+Pdfz81tnZTJC7Z1P+h57fWR1sPElA+kWAMw/GQBYgvv+3qEarAGAQUc9/IWm6xZVFD4ZqxdVPvTFZtV+VwBdvth9TxzgFO9uPsmA7AKA40IG/ykYYe996mgm/ew0Tf30him3XlQtPlxYZNx0Uc2Dt81SHsjDi2HJPY+3DQ9YLwgyAOiqL7mLki1XJkNtyeAt7g4mBqLsSNym9KIoXDTDlWBJ67EBoc0FQsYdKyfft2aa6sQ4Xg88e+T13T3DBRQEGQB0NRffAVAy5Y8HGfx238lBs4Fe0KgeY4misGy6c4rX/N4BP8OljqMfHzJMeuqBm2fcfpnKJN6kHn39xKPDVY3CIQMguqrld1B0dtGlpXbklAxe248Gq8uMs2vV24sATK+2XtLs3nowIB46Oj5kVLuMj9019+LmTKNJvbDz7E83HB4uoHDIACFEV738qxStKygyeL1/wN88ydZQoRJaj1eFw7B6YcX+zsFTgnFZKeVrTsaFM8r+ePfcBq/K+J2k3v6k757H27ihu15AZPBZ6Cov+gqlEwRiKAwyQAhH8Fab74JpzmrF1VWSshjpqxd6nRZ9S3uQ5VKvRVsyzAb6W9dN+cG6JuUFD4T6uCN45x/2JRgOBUkGBaLzXvhlnd5QaGTw2wRLXtndP7ferhq3lRdF4fwG+1XzPW2nBs+IXom1JWPeZMejd5536RyVAApC7Tziv+ORveEYi4IkA/xjpWLp7XqjUS7DcSaD3yRY8tpe3+xaa4bPFwAuq/66xV6jjv74eEg0kUQDMsxG+u5VDT+7ZYZHMcqbRG9/0nf3o/vC8cIlAwA4Tle+5FaD2VqYZPBiOe7VPf1TvJYmxQGnQtEUtWiqc80Sry+cONQV1oiMy+aUP/LVOZef56Ez9xjAy63d33y8jZ/WVbhkAIRwOvfCW4xWuzSRNPG4kcEbwRG88YnP6zA012UWFhIAYDPrPn1e+dLprgOd4axiCMukhIiM2XX2h26f9ZUr6p2Kyxuk6pmtp+9/aqhfraDJAAjH6Mrm32yyO0WJpInHmYzk9+/s9wcjzKemu7L6S611m9Ytq5paaTnWHRn7COHpNbb7r5/2veunTSrP9DHHi2HJzzYdefilY2ToZyxoMgDCsRzVuH6zq66RSnVRX+sAAAaaSURBVFmgsaDIEGazsNHxq9umC0LNZypC8O5+3+9fP7n3RGgUZMystX3psrrVi7xZRXng5Qslvvl424eHBEGbZIoqIDIAsPE41bB+s6OyRm8yFwUZ/OGaMuPD62dk9YgRlrb1oP+p97veP+BjOZJipbRUHYUVs903L69dMXuUYTz2nRj498f2dfliwwUUARngOJZhqIb1m83OMourLCVxgZLBy2Sgv3PN5BuWVWXzhBHpjD/27IdnN24/ezYQl72QKpdx3bKqtcuqq0c7VY4Q/O39zl88dzSW4IYLKAYyCDiWJRxLNazfrDeaHFU1aW0vPDKSBy+aWfaTG6YOxZAclViOvLvf99ruvjf39Q1EGABOq/6yOeVXnl+xYrZ7FE+QpM74Y/c/eXDrgX6BxcVBBgCWTYAjVMP6zRQFV20DRVHFRQa/dVj093+u8epFFTJFZKMES7Yf9gNYOr0sk+EXynph59kHNhwORkbWoisiMgBwTJwQUA3rNwOweSoNFqvUjoInI6kr5rq/t2ZKpXP0LiRX6g7EHth45LWPeoQHi4sMwnEcywDQlc2/CQAoGC22IiUDIO3dkae3nWU5zGuw68fwLBiLEix56r3Or/2xbf9JUfCu4iIDAOFY/twhODiGMdkdVLJ2V1Rk8P8Yluw8Gny+pcdtNyhHENdCb+/ru/MPe1/c1R1PiCZoFR0ZIODdBkY8B6DTG3TSTpaiISN5MBRltuztb+0ITq20jqWimrn2HB/4zhMHHnnteDDCpL2wYiEDIIRNNgUP1TkA6Ewmh7e6qMmQfL2w0Xn3qvpl09VHHI5Ore2B/33j5Nuf9BEid5eLkAyAcAwjAwcAZ2UtbTBIjCtSMpI2L2ly3bWyfmlOEfngkO/3r57YcViwdNCEIAOEsMzIG5YIDoPFaitPWVSxmMlIfjyv3n7jp6pXL6zIfDBOqsIx9qXW7r9v7dp3IjnvaAKRAb7ta6TOJIKDAhxVNbTeIChP3uLiIiN50G6mr1rgvemimlmTsquxHj0b3rzjzDNbuwJhRnB4QpEBApYRrRMgggOA0Wqzuj0Q3doJQobwwPkNjqsWelfO8yg3jZ/xx17b3fvSru7dx4PpbBYfKloyAI5hCRG9aknhAChnVQ2l109gMpLmEaCp2rpqvveqhd4plSMjiU73R7fs7Xv1497WjgAhIOltlr+wIiQDHOE4RpJTKhzQm8228kpZiycYGUJNr7E1T7IBaDsVOtw1Ev34nCCD72kj0hA6MgOZmGiUiYb1ZvGYvAlNBoDDp0OHT0tXGTtXyCAklQzIxecAgHDAJ7qBE50M+Vk95wYZBCCs/DoC8nAQlo0NDMdxK5EhtlmaLI3N4m0Bk8GxMoUCSAcHgFhogInFSmRIbJYmS2OzeFvAZBAibNiQSCGsHQn7+pJ9MKJSSmRMCDIAEJZBeinFPCQcG/H3E1GuJTKGk6WxWbwtcDJUlixSCYjJxGPxgWCJDGmyNDaLt4VNBifz7iqRChwAoqFgfHBQ1mLhwRIZ4m1BkwGOU6hqJKUOB4BY0JeIyMUJLZEh3CkSMgghHJfRGngZwUGASMDHxGLioyUykHohBU4GCKdcCRUqIzgAgJCIv5+Nx5K74sIlJoiNK5Ehk9e4kEE4tUqoUBnDARDCDfb3JaKREhminWIhgyNcxj6DVxZw8EVF/f2J8GCKMSUyCpoMwnGEZEcGsocDBIgMBKKhoMjIEhlpbE7Ja1zIYAnHymepqKzh4BUfDEV8fUPN8iUy0ticklfeySCEsEwmb62yGiUcANh4bLCvl5W8wpTISJtXvskghHAsI3tjMtTo4QBAODbs98VCwWELSmSkyyuvZHCEEI7N/JU1nbKLWiQnEg8PJqIRk91hMFtKZMjllV8yOI4QNrXMUWhMniMpwnHRYCDi97Hs+McQPnfJ4AjLsoTLDRnIhecYEROPMf29epPJaLXT+uHpISUyFM3LCRmEEHAcIVyusOCVSzgAAISJRZlYTG80Gqw2nV4YuatERu7J4LHgRvs+oqycw8GLMPEYE4/p9AadyWwwmSl6eN2OEhnCs8dABiEs4TjCyeaQG2kEx5BYJsEyiXh4QG806U1mnd4ISdhCCPdKZEjLSSWDcBwhGXW4j13awjEkAiYW4zt1ab1BbzBQer3eMAxKiQw5c0bMJcmRnkrjPbVQXuAQiGMScSYBIAbQtI7S6SidXqejKVoHiqIoilCgQFMUdW6RQQBwhAz/jRDCEQJw4GSuJG/6//OmkNQ6TsweAAAAAElFTkSuQmCC">
+<script>
+  // Put the saved Night/Day choice on the page before it draws (no flash). No choice = follow the phone.
+  try {
+    const t = localStorage.getItem("mynews.theme");
+    if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+  } catch { /* storage blocked: follow the phone */ }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===== Design tokens =====
+     Night (dark) is the default. Day (light) is used when the phone is in light mode
+     (and no choice was made), or when the user picks Day. Keep the two Day blocks the same. */
+  :root {
+    --bg: #0b0f19;
+    --bg-glow: rgba(124, 92, 255, 0.14);
+    --bg-glow-2: rgba(34, 211, 238, 0.08);
+    --panel: #111727;
+    --card: #151c2e;
+    --card-hover: #1a2338;
+    --field: #0e1422;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.16);
+    --text: #e7eaf3;
+    --muted: #8e98b3;
+    --accent: #7c5cff;
+    --accent-2: #22d3ee;
+    --accent-3: #f472b6;
+    --accent-soft: rgba(124, 92, 255, 0.16);
+    --accent-ring: rgba(124, 92, 255, 0.35);
+    --on-accent: #ffffff;
+    --focus: #22d3ee;
+    --link: #5eead4;
+    --alert: #fbbf24;
+    --alert-bg: rgba(251, 191, 36, 0.10);
+    --alert-line: rgba(251, 191, 36, 0.45);
+    --danger: #f87171;
+    --danger-bg: rgba(248, 113, 113, 0.08);
+    --unv-bg: rgba(148, 163, 184, 0.16);
+    --unv-text: #cbd5e1;
+    --depth: rgba(0, 0, 0, 0.45);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+    --backdrop: rgba(5, 8, 18, 0.66);
+    --alert-note: #fbbf24;
+    --cat-filter: none;
+    --radius: 16px;
+    --radius-sm: 10px;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f4f6fb; --bg-glow: rgba(98, 70, 234, 0.08); --bg-glow-2: rgba(14, 165, 233, 0.06);
+      --panel: #ffffff; --card: #ffffff; --card-hover: #f8f9fe; --field: #f4f6fb;
+      --line: rgba(20, 30, 60, 0.10); --line-strong: rgba(20, 30, 60, 0.18);
+      --text: #141a2e; --muted: #5a6482;
+      --accent: #6246ea; --accent-2: #0891b2; --accent-3: #db2777;
+      --accent-soft: rgba(98, 70, 234, 0.10); --accent-ring: rgba(98, 70, 234, 0.28);
+      --on-accent: #ffffff; --focus: #0891b2; --link: #0f766e;
+      --alert: #d97706; --alert-bg: rgba(251, 191, 36, 0.14); --alert-line: rgba(217, 119, 6, 0.45);
+      --danger: #dc2626; --danger-bg: rgba(220, 38, 38, 0.06);
+      --unv-bg: rgba(71, 85, 105, 0.10); --unv-text: #475569;
+      --depth: rgba(30, 40, 80, 0.14);
+      --shadow-sm: 0 1px 2px rgba(20, 30, 60, 0.06), 0 4px 14px rgba(20, 30, 60, 0.06);
+      --shadow-lg: 0 24px 60px rgba(20, 30, 60, 0.22);
+      --backdrop: rgba(15, 20, 40, 0.45);
+      --alert-note: #a16207; --cat-filter: brightness(0.7);
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #f4f6fb; --bg-glow: rgba(98, 70, 234, 0.08); --bg-glow-2: rgba(14, 165, 233, 0.06);
+    --panel: #ffffff; --card: #ffffff; --card-hover: #f8f9fe; --field: #f4f6fb;
+    --line: rgba(20, 30, 60, 0.10); --line-strong: rgba(20, 30, 60, 0.18);
+    --text: #141a2e; --muted: #5a6482;
+    --accent: #6246ea; --accent-2: #0891b2; --accent-3: #db2777;
+    --accent-soft: rgba(98, 70, 234, 0.10); --accent-ring: rgba(98, 70, 234, 0.28);
+    --on-accent: #ffffff; --focus: #0891b2; --link: #0f766e;
+    --alert: #d97706; --alert-bg: rgba(251, 191, 36, 0.14); --alert-line: rgba(217, 119, 6, 0.45);
+    --danger: #dc2626; --danger-bg: rgba(220, 38, 38, 0.06);
+    --unv-bg: rgba(71, 85, 105, 0.10); --unv-text: #475569;
+    --depth: rgba(30, 40, 80, 0.14);
+    --shadow-sm: 0 1px 2px rgba(20, 30, 60, 0.06), 0 4px 14px rgba(20, 30, 60, 0.06);
+    --shadow-lg: 0 24px 60px rgba(20, 30, 60, 0.22);
+    --backdrop: rgba(15, 20, 40, 0.45);
+    --alert-note: #a16207; --cat-filter: brightness(0.7);
+    color-scheme: light;
+  }
+
+  /* ===== Base ===== */
+  * { box-sizing: border-box; }
+  html, body { margin: 0; overflow-x: hidden; }
+  @supports (overflow-x: clip) { html, body { overflow-x: clip; } }
+  body {
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(1100px 520px at 0% -12%, var(--bg-glow), transparent 62%),
+      radial-gradient(900px 480px at 100% -6%, var(--bg-glow-2), transparent 60%);
+    background-repeat: no-repeat;
+    color: var(--text);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    padding: 0 16px 72px;
+  }
+  h1, h2, h3, .display { font-family: "Poppins", "Inter", system-ui, sans-serif; margin: 0; }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  ::selection { background: var(--accent-ring); }
+
+  /* ===== Header ===== */
+  header.top {
+    padding: 28px 0 20px;
+    display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .logo {
+    flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 18px var(--accent-ring), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+    font-size: 21px; overflow: hidden;
+  }
+  .logo img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: inherit; }
+  .brand h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; color: var(--text); }
+  .brand p { margin: 2px 0 0; color: var(--muted); font-size: 13.5px; }
+
+  .add {
+    display: flex; gap: 6px; flex: 1 1 340px; max-width: 500px; min-width: 0;
+    background: var(--panel); border: 1px solid var(--line-strong); border-radius: 12px; padding: 5px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  .add:focus-within { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .add input {
+    flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+    color: var(--text); font: inherit; font-size: 15px; padding: 8px 10px;
+  }
+  .add input::placeholder { color: var(--muted); }
+  .add button { border-radius: 9px; }
+
+  /* ===== Buttons: buzz on hover, press-in on click, spinner while busy ===== */
+  button {
+    font: inherit; font-size: 14px; cursor: pointer; border: 0; color: var(--on-accent);
+    border-radius: 10px; padding: 9px 16px; font-weight: 600; line-height: 1.2;
+    background: var(--accent);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 2px 0 rgba(0, 0, 0, 0.18);
+    transition: transform 0.12s ease, box-shadow 0.15s ease, opacity 0.15s, background-color 0.2s, color 0.15s, border-color 0.15s;
+    display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:not(.toggle):hover { box-shadow: 0 6px 18px var(--accent-ring); animation: buzz 0.32s linear 1; }
+  button:not(.toggle):active { transform: translateY(2px) scale(0.94); box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.3); animation: none; }
+  button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button.ghost {
+    background: var(--panel); background-image: none; color: var(--text); border: 1px solid var(--line-strong);
+    padding: 8px 13px; font-weight: 500; box-shadow: var(--shadow-sm);
+  }
+  button.ghost:hover { border-color: var(--accent); background: var(--card-hover); box-shadow: 0 0 0 3px var(--accent-soft); }
+  button:disabled { opacity: 0.6; cursor: wait; transform: none; animation: none; }
+  .ico { display: inline-block; width: 1em; text-align: center; line-height: 1; }
+  .ico::before { content: "↻"; }
+  .busy .ico::before {
+    content: ""; display: inline-block; width: 0.9em; height: 0.9em; box-sizing: border-box;
+    border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%;
+    vertical-align: -0.1em;
+  }
+  .busy .ico { animation: spin 0.7s linear infinite; will-change: transform; }
+
+  /* ===== Toolbar ===== */
+  .toolbar {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px 16px; flex-wrap: wrap;
+    margin: 18px 0 22px; color: var(--muted); font-size: 13.5px;
+  }
+  #motionHint { margin: -12px 0 16px; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+  #motionHint[hidden] { display: none; }
+  #status { font-weight: 500; min-width: 0; }
+  .tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+
+  /* View controls: compact switch + Top 5/10/20 */
+  button.ghost[aria-pressed="true"], .seg button[aria-pressed="true"] {
+    color: var(--on-accent); border-color: transparent;
+    background: var(--accent);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+    box-shadow: 0 2px 8px var(--accent-ring);
+  }
+  .seg {
+    display: inline-flex; align-items: center; gap: 2px; padding: 3px;
+    background: var(--panel); border: 1px solid var(--line-strong); border-radius: 11px;
+    box-shadow: var(--shadow-sm);
+  }
+  .seg-label { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0 6px 0 8px; color: var(--muted); }
+  .seg button {
+    padding: 6px 11px; min-width: 36px; justify-content: center; font-size: 13px; border-radius: 8px;
+    background: transparent; background-image: none; color: var(--muted); box-shadow: none;
+  }
+  .seg button:not([aria-pressed="true"]):hover { color: var(--text); background: var(--card-hover); box-shadow: none; }
+  .tools button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .next-chip { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .next-chip:empty { display: none; }
+  .tools .next-chip {
+    padding: 5px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--text);
+    border: 1px solid var(--line);
+  }
+
+  /* ===== Topic banners ===== */
+  .topic { margin: 0 0 16px; perspective: 1200px; }
+  .topic-head {
+    --rx: 0deg; --ry: 0deg; --lift: 0px;
+    position: relative; isolation: isolate; cursor: pointer; user-select: none;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    padding: 16px 18px; border-radius: var(--radius); color: #fff;
+    background: linear-gradient(115deg, var(--c1), var(--c2) 60%, var(--c3));
+    box-shadow: 0 10px 28px var(--glow), 0 1px 0 rgba(255, 255, 255, 0.18) inset;
+    transform-style: preserve-3d;
+    transform: translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+  }
+  .topic-head::before { /* soft darkening so white text stays readable on light colors */
+    content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.06));
+  }
+  .topic-head:hover { --lift: -2px; box-shadow: 0 16px 40px var(--glow), 0 0 0 1px rgba(255, 255, 255, 0.22) inset; }
+  .topic.open .topic-head { box-shadow: 0 16px 44px var(--glow), 0 0 0 1px rgba(255, 255, 255, 0.2) inset; }
+  .topic-head .title { min-width: 0; flex: 1 1 200px; }
+  .topic-head h2 { font-size: clamp(18px, 2.6vw, 23px); font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25); }
+  .toggle {
+    all: unset; cursor: pointer; display: flex; align-items: center; gap: 12px;
+    font: inherit; color: inherit; overflow-wrap: anywhere;
+  }
+  .toggle:focus-visible { outline: 2px solid #fff; outline-offset: 4px; border-radius: 8px; }
+  .arrow {
+    flex: none; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
+    background: rgba(255, 255, 255, 0.2); font-size: 19px; line-height: 1;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    transition: transform 0.35s cubic-bezier(.3, 1.5, .5, 1), background 0.2s;
+  }
+  .topic.open .arrow { transform: rotate(90deg); background: rgba(255, 255, 255, 0.3); }
+  .topic-head .count { font-family: "Inter", system-ui, sans-serif; font-size: 12.5px; font-weight: 500; opacity: 0.92; margin: 3px 0 0 42px; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3); }
+  .topic-head .actions { display: flex; gap: 8px; }
+  .topic-head .actions button {
+    padding: 7px 13px; font-size: 13px; color: #fff;
+    background: rgba(255, 255, 255, 0.16); background-image: none;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  }
+  .topic-head .actions button:hover { background: rgba(255, 255, 255, 0.28); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45), 0 6px 16px rgba(0, 0, 0, 0.2); }
+
+  /* ===== Cards ===== */
+  .grid {
+    display: grid; gap: 16px; margin-top: 14px; padding-bottom: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(min(290px, 100%), 1fr));
+    perspective: 1000px;
+  }
+  .grid[hidden] { display: none; }
+  .topic.open .grid { animation: unfold 0.4s ease-in-out both; transform-origin: top center; }
+  /* macOS-style minimize: the grid shrinks up into its banner, then hides */
+  .grid.closing { transform-origin: top center; pointer-events: none; }   /* the motion itself runs from JS (animateGrid) */
+  .grid.opening, .grid.closing { will-change: transform, opacity; }
+  .grid.closing { perspective: none; }
+  .grid.closing .card { transition: none; transform: none; transform-style: flat; }
+  /* ===== Smooth motion, site-wide =====
+     html.moving is on while anything moves (topic open/close, cards coming in, reader, settings, key points).
+     Then the looping shine/glow pause, the mouse glare and 3D tilt step aside, and costly blurs/shadow fades are skipped. */
+  html.moving .kp-btn::after, html.moving .badge.attn::after, html.moving .skeleton::after { animation-play-state: paused; }
+  html.moving .card::after, html.moving .topic-head::after { display: none; }
+  html.moving .card, html.moving .topic-head { --rx: 0deg !important; --ry: 0deg !important; }
+  html.moving .topic-head { transition: transform 0.3s ease-out; }   /* banner shadow changes at once, not frame by frame */
+  html.moving .topic-head .actions button, .topic-head .actions button.busy { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  /* Night/Day: swap colors in one step (no hundreds of color/shadow fades at once) */
+  html.theme-swap *, html.theme-swap *::before, html.theme-swap *::after { transition: none !important; }
+  .card {
+    --rx: 0deg; --ry: 0deg; --lift: 0px;
+    position: relative; display: flex; flex-direction: column; gap: 10px;
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 18px 16px; overflow-wrap: anywhere;
+    box-shadow: var(--shadow-sm);
+    transform-style: preserve-3d;
+    transform: translateY(var(--lift)) rotateX(var(--rx)) rotateY(var(--ry));
+    transition: transform 0.3s ease-out, background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+    animation: rise 0.4s ease backwards; animation-delay: calc(min(var(--i, 0), 6) * 40ms);
+  }
+  .card:nth-child(n+13) { animation: none; }   /* far-down cards just appear: fewer things moving at once */
+  .card::before { /* thin topic-colored accent line */
+    content: ""; position: absolute; left: 14px; right: 14px; top: -1px; height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3));
+  }
+  .card::after, .topic-head::after { /* light glare that follows the mouse */
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, 0.10), transparent 45%);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .card:hover::after, .topic-head:hover::after { opacity: 1; }
+  .card:hover {
+    --lift: -4px; background: var(--card-hover); border-color: var(--line-strong);
+    box-shadow: 0 18px 40px var(--depth), 0 0 0 1px var(--c1);
+  }
+  .card.alert { border-color: var(--alert-line); background: linear-gradient(180deg, var(--alert-bg), var(--card) 55%); }
+  .card.alert::before { background: linear-gradient(90deg, #fbbf24, #f97316, #ef4444); }
+  .card.alert:hover { box-shadow: 0 18px 40px var(--depth), 0 0 0 1px var(--alert); }
+  .card .badges { display: flex; flex-wrap: wrap; gap: 6px; }
+  .card h3 { font-size: 16.5px; font-weight: 600; line-height: 1.4; letter-spacing: -0.005em; }
+  .card h3 a { color: var(--text); text-decoration: none; background: linear-gradient(90deg, var(--c1), var(--c2)) 0 100% / 0 2px no-repeat; transition: background-size 0.3s; }
+  .card h3 a:hover, .card h3 a:focus-visible { background-size: 100% 2px; outline: none; }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  .meta { font-size: 12.5px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: auto; padding-top: 2px; }
+  .meta .src { font-weight: 600; color: var(--text); opacity: 0.85; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c1); display: inline-block; box-shadow: 0 0 0 3px var(--glow, transparent); }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600;
+    padding: 3px 9px; border-radius: 6px; letter-spacing: 0.02em; line-height: 1.5;
+  }
+  .badge.attn {
+    background: linear-gradient(135deg, #fde047, #fbbf24 50%, #fb923c); color: #2a1d00;
+    box-shadow: 0 2px 10px rgba(251, 191, 36, 0.28); position: relative;
+  }
+  .badge.attn::after { /* the pulsing glow: only its opacity moves (cheap), not the shadow itself */
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    box-shadow: 0 2px 18px rgba(251, 191, 36, 0.6); opacity: 0; animation: glowPulse 2.8s ease-in-out infinite;
+  }
+  .badge.unv { background: var(--unv-bg); color: var(--unv-text); box-shadow: inset 0 0 0 1px var(--line); }
+  .alert-note { font-size: 12px; color: var(--alert-note); font-weight: 600; }
+  .card a.open {
+    margin-left: auto; color: var(--link); text-decoration: none; font-weight: 600; font-size: 13px;
+    display: inline-flex; gap: 4px; padding: 6px 2px; transition: gap 0.2s, color 0.2s;
+  }
+  .card a.open:hover, .card a.open:focus-visible { gap: 9px; text-decoration: underline; text-underline-offset: 3px; }
+  .card-actions {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--line);
+  }
+  button.read-here {
+    padding: 7px 12px; font-size: 13px;
+    background: var(--c1); background-image: linear-gradient(135deg, var(--c1), var(--c2));
+  }
+  button.read-here:hover { box-shadow: 0 6px 18px var(--glow); }
+
+  /* Card strip, teaser and key points */
+  .strip { display: flex; align-items: center; gap: 8px; }
+  .chip {
+    width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; font-size: 15px; flex: none;
+    background: linear-gradient(135deg, var(--c1), var(--c2)); box-shadow: 0 2px 8px var(--glow);
+  }
+  .cat { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c1); filter: var(--cat-filter); }
+  .card .teaser {
+    color: var(--text); opacity: 0.78; font-size: 14px; line-height: 1.55;
+    display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .kp-btn {
+    padding: 7px 12px; font-size: 13px; position: relative; overflow: hidden;
+    background: var(--c3); background-image: linear-gradient(135deg, var(--c3), var(--c1));
+  }
+  .kp-btn:hover { box-shadow: 0 6px 18px var(--glow); }
+  .kp-btn .ico::before { content: "✨"; }
+  .kp-btn.busy .ico::before {
+    content: ""; display: inline-block; width: 0.9em; height: 0.9em; box-sizing: border-box;
+    border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; vertical-align: -0.1em;
+  }
+  .kp-btn::after { /* slow shimmer sweep */
+    content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.32), transparent);
+    transform: translateX(0) skewX(-20deg); animation: sweep 4s ease-in-out infinite; pointer-events: none;
+  }
+  .kp { display: grid; grid-template-rows: 0fr; visibility: hidden; }
+  .kp.open, .kp.kp-out { grid-template-rows: 1fr; visibility: visible; }   /* kp-out = closing: stays in place while it fades */
+  .kp > div { overflow: hidden; min-height: 0; opacity: 0; transform: translateY(-8px) scale(0.98); transform-origin: top center;
+    transition: opacity 0.2s ease, transform 0.2s ease; }
+  .kp.open > div { opacity: 1; transform: none; transition: opacity 0.28s ease, transform 0.28s cubic-bezier(.2, 1, .4, 1); }
+  .kp.open > div, .kp.kp-out > div { padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); border: 1px solid var(--line); }
+  .kp ol { list-style: none; counter-reset: kp; margin: 0; padding: 0; display: grid; gap: 9px; }
+  .kp li { counter-increment: kp; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.5; }
+  .kp li::before {
+    content: counter(kp); flex: none; width: 21px; height: 21px; border-radius: 6px; display: grid; place-items: center;
+    font-size: 11.5px; font-weight: 700; color: #fff; margin-top: 1px;
+    background: linear-gradient(135deg, var(--c1), var(--c2));
+  }
+  .kp .kp-src { font-size: 11.5px; color: var(--muted); margin-top: 10px; }
+
+  /* ===== Compact list: one slim row per story ===== */
+  body.compact .grid { grid-template-columns: repeat(auto-fill, minmax(min(520px, 100%), 1fr)); gap: 8px; }
+  .card.row {
+    display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center;
+    column-gap: 10px; row-gap: 0; padding: 8px 8px 8px 10px; border-radius: 12px;
+    border-left: 3px solid var(--c1);
+    transform: none; box-shadow: var(--shadow-sm);
+  }
+  .card.row::before { display: none; }
+  .card.row:hover { --lift: 0px; transform: none; box-shadow: 0 6px 18px var(--depth); border-color: var(--line-strong); border-left-color: var(--c1); }
+  .card.row.alert { background: linear-gradient(90deg, var(--alert-bg), var(--card) 70%); border-left-color: #fbbf24; }
+  .chip.sm { width: 26px; height: 26px; border-radius: 7px; font-size: 14px; }
+  .row-main { min-width: 0; display: flex; align-items: baseline; gap: 8px; }
+  .card .row-title { min-width: 0; flex: 1 1 auto; font-family: "Inter", system-ui, sans-serif; font-size: 14.5px; font-weight: 600; line-height: 1.35;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row-meta { flex: none; display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; color: var(--muted); white-space: nowrap; max-width: 45%; overflow: hidden; }
+  .row-meta .src { font-weight: 600; color: var(--text); opacity: 0.8; overflow: hidden; text-overflow: ellipsis; }
+  .tag {
+    flex: none; display: inline-grid; place-items: center; height: 18px; min-width: 18px; padding: 0 5px;
+    border-radius: 5px; font-size: 10px; font-weight: 800; line-height: 1;
+  }
+  .tag.attn { background: linear-gradient(135deg, #fde047, #fb923c); color: #2a1d00; box-shadow: 0 0 8px rgba(251, 191, 36, 0.45); }
+  .tag.unv { background: var(--unv-bg); color: var(--unv-text); box-shadow: inset 0 0 0 1px var(--line); }
+  .row-acts { display: flex; gap: 6px; }
+  .row-acts button { width: 34px; height: 34px; padding: 0; justify-content: center; font-size: 15px; border-radius: 9px; }
+  .card.row .kp { grid-column: 1 / -1; }
+  .card.row .kp.open, .card.row .kp.kp-out { margin-top: 8px; }
+  @media (max-width: 600px) {   /* phones: source and time go on a tiny line under the headline */
+    .row-main { flex-direction: column; align-items: stretch; gap: 1px; }
+    .row-meta { max-width: 100%; }
+  }
+
+  /* ===== Reader panel ===== */
+  body.reading { overflow: hidden; }
+  .reader { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 24px; }
+  .reader[hidden] { display: none; }
+  /* macOS-style minimize: the reader shrinks into the card it came from */
+  .reader.minimizing { pointer-events: none; }
+  .reader.minimizing .sheet { will-change: transform, opacity; }   /* the motion itself runs from JS (minimizeReader) */
+  .reader.minimizing .reader-backdrop, .reader.opening .reader-backdrop { -webkit-backdrop-filter: none; backdrop-filter: none; }   /* also while opening */
+  .reader.opening .sheet { will-change: transform, opacity; }   /* full-screen blur is costly per frame on phones; it is fading out anyway */
+  .reader-backdrop {
+    position: absolute; inset: 0; background: var(--backdrop);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    animation: fadeIn 0.25s ease both;
+  }
+  .sheet {
+    position: relative; display: flex; flex-direction: column; min-width: 0;
+    width: min(760px, 100%); max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px);
+    background: var(--panel); color: var(--text); border: 1px solid var(--line-strong);
+    border-radius: 20px; overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    animation: sheetIn 0.32s cubic-bezier(.2, 1.1, .4, 1) both;
+  }
+  .sheet::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; z-index: 1;
+    background: linear-gradient(90deg, var(--c1, var(--accent)), var(--c2, var(--accent-2)), var(--c3, var(--accent-3)));
+  }
+  .sheet-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 14px 16px 12px; border-bottom: 1px solid var(--line); flex: none;
+    background: var(--panel);
+  }
+  .btn-link {
+    display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: #fff; font-weight: 600; font-size: 14px;
+    border-radius: 10px; padding: 9px 16px; white-space: nowrap;
+    background: var(--c1, var(--accent));
+    background-image: linear-gradient(135deg, var(--c1, var(--accent)), var(--c2, var(--accent-2)));
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.18);
+    transition: transform 0.12s ease, box-shadow 0.15s ease;
+  }
+  .btn-link:hover { box-shadow: 0 6px 18px var(--glow, var(--accent-ring)); animation: buzz 0.32s linear 1; }
+  .btn-link:active { transform: translateY(2px) scale(0.94); box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.3); animation: none; }
+  .btn-link:focus-visible, .sheet button:focus-visible, .sheet a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+  .sheet-body { overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; padding: 24px 28px 40px; -webkit-overflow-scrolling: touch; }
+  .sheet-body:focus { outline: none; }
+  .r-inner { max-width: 66ch; margin: 0 auto; overflow-wrap: anywhere; }
+  .r-meta { font-size: 13px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+  .r-meta .src { font-weight: 600; color: var(--text); opacity: 0.85; }
+  .r-meta .dot { background: var(--c1, var(--accent)); box-shadow: 0 0 0 3px var(--glow, var(--accent-soft)); }
+  .sheet h2 { font-size: clamp(22px, 3.6vw, 29px); font-weight: 700; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 20px; }
+  .r-text p { font-family: "Inter", system-ui, sans-serif; font-size: 17.5px; line-height: 1.75; margin: 0 0 1.1em; color: var(--text); }
+  .r-note {
+    font-size: 14px; padding: 12px 14px; border-radius: 12px; margin: 0 0 18px;
+    background: var(--alert-bg); color: var(--text); border: 1px solid var(--alert-line);
+  }
+  .r-error { text-align: center; padding: 28px 16px; border: 1px dashed var(--danger); border-radius: var(--radius); background: var(--danger-bg); }
+  .r-error p { color: var(--danger); margin: 0 0 16px; font-size: 15.5px; font-weight: 500; }
+  .r-end { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; color: var(--muted); font-size: 13px; }
+  .r-loading { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 56px 0; color: var(--muted); font-size: 14px; }
+  .spinner {
+    width: 38px; height: 38px; border-radius: 50%; border: 3px solid var(--line-strong);
+    border-top-color: var(--c1, var(--accent)); border-right-color: var(--c2, var(--accent-2));
+    animation: spin 0.8s linear infinite;
+  }
+  @media (max-width: 640px) {
+    .reader { padding: 0; }
+    .sheet { width: 100%; height: 100%; max-height: none; border-radius: 0; border: 0; }
+    .sheet-bar { padding: 12px 16px 10px; }
+    .sheet-body { padding: 20px 16px 40px; }
+  }
+  @media (min-width: 900px) { .r-text p { font-size: 18.5px; } }
+
+  /* ===== Settings panel (uses the same overlay + sheet as the reader) ===== */
+  .set-sheet { width: min(560px, 100%); }
+  .set-body { display: grid; gap: 12px; }
+  .set-body h2 { margin-bottom: 6px; font-size: 22px; }
+  .set-row { display: grid; gap: 10px; padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); min-width: 0; }
+  .set-row > .lbl { font-weight: 600; font-size: 14.5px; }
+  .set-row .hint { font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.5; }
+  .set-row .seg { justify-self: start; flex-wrap: wrap; box-shadow: none; background: var(--field); }
+  .set-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .set-line .lbl { font-weight: 600; font-size: 14.5px; }
+  .topic-box { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .topic-box input {
+    flex: 1 1 200px; min-width: 0; font: 600 14.5px ui-monospace, "SF Mono", Menlo, monospace; color: var(--text);
+    background: var(--field); border: 1px solid var(--line-strong); border-radius: 10px; padding: 9px 12px;
+  }
+  .topic-box input:focus { outline: 2px solid var(--focus); outline-offset: 1px; }
+  .topic-box button { padding: 8px 13px; font-size: 13px; }
+  .test-box { display: grid; gap: 6px; justify-items: start; min-width: 0; }
+  .test-box button { padding: 8px 13px; font-size: 13px; }
+  #ntfyTest:not(.busy) .ico::before { content: "📨"; }
+  .test-status { overflow-wrap: anywhere; }
+  .test-status:empty { display: none; }
+  .set-row .test-status.ok { color: var(--accent); font-weight: 600; }
+  .set-row .test-status.bad { color: var(--danger); font-weight: 600; }
+  .app-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .app-link {
+    display: inline-flex; align-items: center; gap: 8px; min-width: 0;
+    padding: 8px 13px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: 600;
+    color: var(--text); background: var(--field); border: 1px solid var(--line-strong);
+    transition: transform 0.12s ease, border-color 0.15s, box-shadow 0.15s;
+  }
+  .app-link small { font-weight: 500; color: var(--muted); font-size: 11.5px; }
+  .app-link:hover { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); animation: buzz 0.32s linear 1; }
+  .app-link:active { transform: translateY(2px) scale(0.95); animation: none; }
+  .app-link.alt { background: transparent; border-style: dashed; }
+  button.switch {
+    position: relative; width: 52px; height: 30px; padding: 0; flex: none; justify-content: center; border-radius: 999px;
+    background: var(--unv-bg); background-image: none; box-shadow: inset 0 0 0 1px var(--line-strong);
+  }
+  button.switch::after {
+    content: ""; position: absolute; top: 3px; left: 3px; width: 24px; height: 24px; border-radius: 50%;
+    background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); transition: transform 0.25s cubic-bezier(.3, 1.5, .5, 1);
+  }
+  button.switch[aria-checked="true"] { background: var(--accent); background-image: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+  button.switch[aria-checked="true"]::after { transform: translateX(22px); }
+  button.switch.busy::after { border: 3px solid var(--accent); border-right-color: transparent; background: #fff; box-sizing: border-box; animation: spin 0.7s linear infinite; }
+  button.switch.busy[aria-checked="true"]::after { animation: spinOn 0.7s linear infinite; }
+  .set-foot { font-size: 12.5px; color: var(--muted); display: grid; gap: 4px; padding: 0 4px; }
+  @keyframes spinOn { from { transform: translateX(22px) rotate(0); } to { transform: translateX(22px) rotate(360deg); } }
+
+  /* ===== Loading, empty and error states ===== */
+  .skeleton {
+    position: relative; height: 168px; border-radius: var(--radius); border: 1px solid var(--line);
+    background: var(--card); overflow: hidden;
+  }
+  .skeleton::after { /* shimmer: a soft light band slides across (transform only) */
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--card-hover) 50%, transparent);
+    transform: translateX(-100%); animation: shimmer 1.3s infinite;
+  }
+  .skeleton::before { /* placeholder lines: icon, title, two text lines */
+    content: ""; position: absolute; left: 18px; right: 18px; top: 20px; height: 110px;
+    background:
+      linear-gradient(var(--line-strong), var(--line-strong)) 0 0 / 28px 28px no-repeat,
+      linear-gradient(var(--line-strong), var(--line-strong)) 0 44px / 90% 14px no-repeat,
+      linear-gradient(var(--line), var(--line)) 0 70px / 100% 10px no-repeat,
+      linear-gradient(var(--line), var(--line)) 0 90px / 70% 10px no-repeat;
+    border-radius: 6px; z-index: 1;
+  }
+  .empty, .error {
+    grid-column: 1 / -1; text-align: center; padding: 30px 20px; border-radius: var(--radius);
+    border: 1px dashed var(--line-strong); color: var(--muted); background: var(--panel); font-size: 14px;
+  }
+  .empty::before, .error::before {
+    display: block; font-size: 26px; line-height: 1; margin-bottom: 10px;
+  }
+  .empty::before { content: "🗞️"; }
+  .error::before { content: "⚠️"; }
+  .error { color: var(--danger); border-color: var(--danger); background: var(--danger-bg); }
+  .hello {
+    text-align: center; padding: 56px 20px; color: var(--muted); margin-top: 8px;
+    border: 1px dashed var(--line-strong); border-radius: 20px; background: var(--panel);
+  }
+  .hello::before {
+    content: "📰"; display: grid; place-items: center; width: 60px; height: 60px; margin: 0 auto 16px;
+    border-radius: 16px; font-size: 28px; background: var(--accent-soft); border: 1px solid var(--line);
+  }
+  .hello h2 { color: var(--text); font-size: 21px; font-weight: 600; margin-bottom: 6px; }
+  .hello p { margin: 0; font-size: 14.5px; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%) translateY(140px);
+    background: var(--panel); color: var(--text); border: 1px solid var(--line-strong);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px; border-radius: 12px; box-shadow: var(--shadow-lg);
+    opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease; max-width: calc(100% - 32px); font-size: 14px; font-weight: 500; z-index: 10;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; } }
+  @keyframes unfold { from { opacity: 0; transform: translateY(-28px) scale(0.6, 0.08); } to { opacity: 1; transform: none; } }
+  @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes fadeIn { from { opacity: 0; } }
+  @keyframes sheetIn { from { opacity: 0; transform: translateY(24px) scale(0.98); } }
+  @keyframes sweep { 0%, 60% { transform: translateX(0) skewX(-20deg); } 100% { transform: translateX(475%) skewX(-20deg); } }
+  @keyframes buzz {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    20% { transform: translateX(-1.5px) rotate(-1deg); }
+    40% { transform: translateX(1.5px) rotate(1deg); }
+    60% { transform: translateX(-1px) rotate(-0.5deg); }
+    80% { transform: translateX(1px) rotate(0.5deg); }
+  }
+  @keyframes glowPulse { 0%, 100% { opacity: 0; } 50% { opacity: 1; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .card, .topic-head { transform: none !important; }
+    .kp-btn::after, .badge.attn::after, .skeleton::after { display: none; }
+    .kp > div { transform: none !important; }
+    /* keep the loading spinner turning (slowly) so you still see work is happening */
+    .busy .ico, .spinner { animation: spin 1.6s linear infinite !important; }
+  }
+
+  /* ===== Phones ===== */
+  @media (max-width: 520px) {
+    header.top { padding: 20px 0 16px; }
+    .brand h1 { font-size: 22px; }
+    .logo { width: 40px; height: 40px; font-size: 19px; }
+    .add { flex-basis: 100%; max-width: none; }
+    .toolbar { margin: 14px 0 18px; }
+    .tools { width: 100%; }
+    .topic-head { padding: 14px 14px; }
+    .topic-head .count { margin-left: 42px; }
+    .topic-head .actions { width: 100%; justify-content: flex-end; }
+    .card { padding: 16px 14px 14px; }
+    .set-row { padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2I4ZmU2Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWY1ZmIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOSIgZmlsbD0idXJsKCNnKSIvPjxwYXRoIGQ9Ik0xNiA1IDI1IDguNnY2LjZjMCA1LjctMy44IDkuOC05IDExLjMtNS4yLTEuNS05LTUuNi05LTExLjNWOC42eiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik0xOS40IDEyLjlhNC40IDQuNCAwIDEgMCAuOSAzLjloLTMuNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PGNpcmNsZSBjeD0iMTYuNSIgY3k9IjE2LjgiIHI9IjEuNCIgZmlsbD0iI2ZmZDE2NiIvPjwvc3ZnPgo=" alt="Gelord logo" width="44" height="44"></div>
+      <div>
+        <h1 class="display">Gelord x News</h1>
+        <p>Your topics, the latest headlines.</p>
+      </div>
+    </div>
+    <form class="add" id="addForm" autocomplete="off">
+      <input id="topicInput" type="text" maxlength="60" placeholder="Add a topic, e.g. electric cars" aria-label="New topic">
+      <button type="submit">Add topic</button>
+    </form>
+  </header>
+
+  <div class="toolbar">
+    <span id="status">Loading your topics…</span>
+    <div class="tools">
+      <button class="ghost" id="themeBtn" type="button" aria-label="Switch to day mode" title="Switch to day mode"><span class="theme-ico" aria-hidden="true">☀️</span> <span class="theme-txt">Day</span></button>
+      <button class="ghost" id="compactBtn" type="button" aria-pressed="false"><span aria-hidden="true">☰</span> Compact</button>
+      <div class="seg" id="limitSeg" role="group" aria-label="Stories per topic">
+        <span class="seg-label">Top</span>
+        <button type="button" data-limit="5" aria-pressed="false">5</button>
+        <button type="button" data-limit="10" aria-pressed="true">10</button>
+        <button type="button" data-limit="20" aria-pressed="false">20</button>
+      </div>
+      <button class="ghost" id="refreshAll" type="button"><span class="ico" aria-hidden="true"></span> Refresh all</button>
+      <button class="ghost" id="settingsBtn" type="button" aria-haspopup="dialog"><span aria-hidden="true">⚙️</span> Settings</button>
+      <span class="next-chip" id="nextChip"></span>
+    </div>
+  </div>
+
+  <p id="motionHint" hidden>Animations are off because your phone's "Remove animations" setting is on. Turn it off in Android Settings › Accessibility to see the motion.</p>
+
+  <main id="topics"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="reader" id="reader" hidden>
+  <div class="reader-backdrop" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="rTitle">
+    <div class="sheet-bar">
+      <button type="button" class="ghost" data-close>✕ Close</button>
+      <a class="btn-link" id="rOpen" href="#" target="_blank" rel="noopener noreferrer">Open original <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="sheet-body" id="rBody" tabindex="-1">
+      <div class="r-inner">
+        <div class="r-meta" id="rMeta"></div>
+        <h2 id="rTitle"></h2>
+        <div id="rContent" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="reader" id="settings" hidden>
+  <div class="reader-backdrop" data-sclose></div>
+  <div class="sheet set-sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle">
+    <div class="sheet-bar">
+      <button type="button" class="ghost" data-sclose>✕ Close</button>
+      <span class="next-chip" id="sNext"></span>
+    </div>
+    <div class="sheet-body">
+      <div class="set-body">
+        <h2 id="sTitle">⚙️ Settings</h2>
+        <div class="set-row">
+          <span class="lbl">Refresh news every</span>
+          <div class="seg" id="intervalSeg" role="group" aria-label="Refresh interval">
+            <button type="button" data-interval="15" aria-pressed="false">15 min</button>
+            <button type="button" data-interval="30" aria-pressed="false">30 min</button>
+            <button type="button" data-interval="60" aria-pressed="false">60 min</button>
+          </div>
+          <p class="hint">The server refreshes every topic on its own, even with this page closed.</p>
+        </div>
+        <div class="set-row">
+          <span class="lbl">Alerts per push, per topic</span>
+          <div class="seg" id="pushSeg" role="group" aria-label="Alerts per push">
+            <button type="button" data-push="1" aria-pressed="false">1</button>
+            <button type="button" data-push="3" aria-pressed="false">3</button>
+            <button type="button" data-push="5" aria-pressed="false">5</button>
+            <button type="button" data-push="10" aria-pressed="false">10</button>
+          </div>
+          <p class="hint">Only “⚠️ Needs attention” stories are sent, each one only once.</p>
+        </div>
+        <div class="set-row">
+          <div class="set-line">
+            <span class="lbl" id="notifyLbl">Phone notifications</span>
+            <button type="button" class="switch" id="notifySwitch" role="switch" aria-checked="false" aria-labelledby="notifyLbl"></button>
+          </div>
+          <p class="hint" id="notifyHint">Off. Nothing is sent.</p>
+        </div>
+        <div class="set-row">
+          <span class="lbl">Get the ntfy app</span>
+          <div class="app-links">
+            <a class="app-link" href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🤖</span> Android <small>Google Play</small></a>
+            <a class="app-link" href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🍎</span> iPhone <small>App Store</small></a>
+            <a class="app-link alt" href="https://f-droid.org/en/packages/io.heckel.ntfy/" target="_blank" rel="noopener noreferrer">Android <small>F-Droid</small></a>
+          </div>
+          <p class="hint">Official free ntfy app (from ntfy.sh). Install it, then subscribe to your topic below.</p>
+        </div>
+        <div class="set-row">
+          <label class="lbl" for="ntfyTopic">Your ntfy topic</label>
+          <div class="topic-box">
+            <input id="ntfyTopic" type="text" readonly spellcheck="false" autocomplete="off" value="">
+            <button type="button" id="copyTopic">📋 Copy</button>
+            <button type="button" class="ghost" id="regenTopic"><span class="ico" aria-hidden="true"></span> Regenerate</button>
+          </div>
+          <div class="test-box">
+            <button type="button" class="ghost" id="ntfyTest"><span class="ico" aria-hidden="true"></span> Send test</button>
+            <p class="hint test-status" id="testStatus" role="status" aria-live="polite"></p>
+          </div>
+          <p class="hint">Install the free ntfy app and subscribe to this topic.</p>
+          <p class="hint">⚠️ Keep it private: anyone who knows this name can read your alerts.</p>
+        </div>
+        <div class="set-foot" id="sFoot"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const $ = (sel) => document.querySelector(sel);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
+
+  // Each topic gets its own vivid 3-color gradient (picked from its name).
+  const GRADIENTS = [
+    ["#7c5cff", "#22d3ee", "#a855f7"], ["#f472b6", "#fb923c", "#f59e0b"],
+    ["#10b981", "#3b82f6", "#06b6d4"], ["#f59e0b", "#ef4444", "#ec4899"],
+    ["#8b5cf6", "#ec4899", "#f97316"], ["#0d9488", "#65a30d", "#16a34a"],
+    ["#06b6d4", "#6366f1", "#a855f7"], ["#f43f5e", "#a855f7", "#6366f1"],
+    ["#059669", "#0891b2", "#2563eb"], ["#ea580c", "#e11d48", "#c026d3"],
+    ["#0ea5e9", "#2563eb", "#7c3aed"], ["#d946ef", "#8b5cf6", "#0ea5e9"]
+  ];
+  const hexToRgba = (hex, a) => {
+    const n = parseInt(hex.slice(1), 16);
+    return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+  };
+  const gradientFor = (name) => {
+    let h = 0;
+    for (const ch of name) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+    const [a, b, c] = GRADIENTS[h % GRADIENTS.length];
+    return `--c1:${a};--c2:${b};--c3:${c};--glow:${hexToRgba(a, 0.35)}`;
+  };
+
+  const openSet = new Set();   // topics the user has opened
+  const loaded = new Set();    // topics whose news is already on the page
+
+  function timeAgo(dateStr) {
+    const t = Date.parse(dateStr);
+    if (isNaN(t)) return "";
+    const mins = Math.round((Date.now() - t) / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins} min ago`;
+    const hrs = Math.round(mins / 60);
+    if (hrs < 48) return `${hrs} h ago`;
+    return `${Math.round(hrs / 24)} days ago`;
+  }
+
+  let toastTimer;
+  function toast(msg) {
+    const el = $("#toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove("show"), 3200);
+  }
+
+  async function api(path, body) {
+    const opts = body === undefined ? {} : {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body)
+    };
+    const res = await fetch(path, opts);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
+    return data;
+  }
+
+  // Show a spinner on a button while a task runs.
+  async function withBusy(btn, task) {
+    btn.disabled = true;
+    btn.classList.add("busy");
+    try { return await task(); }
+    finally { btn.disabled = false; btn.classList.remove("busy"); }
+  }
+
+  // Smooth motion: html.moving is on while something moves (CSS pauses loops, glare and tilt then).
+  let movingUntil = 0, movingTimer = 0;
+  function markMoving(ms) {
+    const end = Date.now() + ms;
+    if (end <= movingUntil) return;   // a longer motion is already running
+    movingUntil = end;
+    document.documentElement.classList.add("moving");
+    clearTimeout(movingTimer);
+    movingTimer = setTimeout(() => document.documentElement.classList.remove("moving"), ms);
+  }
+
+  const stories = new Map();   // story key -> item (for the reader)
+  let storyCount = 0;
+
+  // Category icon chosen from the topic + headline words.
+  const CATEGORIES = [
+    [/game|gaming|steam|xbox|playstation|nintendo|console|esport/, "🎮", "Gaming"],
+    [/crypto|bitcoin|ethereum|blockchain|token/, "🪙", "Crypto"],
+    [/money|stock|market|econom|price|bank|finance|inflation|invest|peso|dollar/, "💰", "Money"],
+    [/sport|nba|nfl|soccer|football|basketball|tennis|olympic|boxing|ufc|f1\b/, "🏆", "Sport"],
+    [/tech|ai\b|phone|chip|software|app\b|cloud|laptop|device|android|iphone|gadget|hardware|cpu|gpu/, "💻", "Tech"],
+    [/health|medic|covid|vaccine|doctor|disease/, "🩺", "Health"],
+    [/climate|weather|storm|typhoon|earthquake|flood|environment/, "🌦️", "Weather"],
+    [/politic|election|senate|president|government|law\b/, "🏛️", "Politics"],
+    [/movie|film|music|show|celebrity|series|album/, "🎬", "Culture"]
+  ];
+  function categoryFor(text) {
+    const low = String(text || "").toLowerCase();
+    for (const [re, icon, label] of CATEGORIES) if (re.test(low)) return { icon, label };
+    return { icon: "📰", label: "News" };
+  }
+
+  // First sentence of the feed snippet = quick teaser (no extra request).
+  function teaserOf(item) {
+    const t = String(item.snippet || "").trim();
+    if (!t) return "";
+    const m = t.match(/^.{20,}?[.!?](?=\s|$)/);
+    return m ? m[0] : t;
+  }
+
+  function cardHtml(item, i, topic) {
+    const link = /^https:\/\//.test(item.link) ? item.link : "#";
+    const key = String(++storyCount);
+    stories.set(key, item);
+    const attn = item.attention && item.attention.length;
+    const cat = categoryFor(`${topic || ""} ${item.title}`);
+    const teaser = teaserOf(item);
+    if (view.compact) {
+      const tags = [];
+      if (attn) tags.push(`<span class="tag attn" title="Needs attention: ${esc(item.attention.join(", "))}">⚠️</span>`);
+      if (!item.trusted) tags.push(`<span class="tag unv" title="Unverified source">?</span>`);
+      return `
+      <article class="card row ${attn ? "alert" : ""}" style="--i:${Math.min(i, 12)}">
+        <span class="chip sm" aria-hidden="true">${cat.icon}</span>
+        <div class="row-main">
+          <h3 class="row-title"><a href="${esc(link)}" target="_blank" rel="noopener noreferrer" data-read="${key}" title="${esc(item.title)}">${esc(item.title)}</a></h3>
+          <div class="row-meta">${tags.join("")}<span class="src">${esc(item.source)}</span>${item.published ? `<span>· ${esc(timeAgo(item.published))}</span>` : ""}</div>
+        </div>
+        <div class="row-acts">
+          <button type="button" class="kp-btn" data-kp="${key}" aria-expanded="false" aria-controls="kp-${key}" aria-label="Key points" title="Key points"><span class="ico" aria-hidden="true"></span></button>
+          <button type="button" class="read-here" data-read="${key}" aria-label="Read here" title="Read here"><span aria-hidden="true">📖</span></button>
+        </div>
+        <div class="kp" id="kp-${key}" aria-live="polite"><div></div></div>
+      </article>`;
+    }
+    const badges = [];
+    if (attn) badges.push(`<span class="badge attn">⚠️ Needs attention</span>`);
+    if (!item.trusted) badges.push(`<span class="badge unv">Unverified source</span>`);
+    return `
+      <article class="card ${attn ? "alert" : ""}" style="--i:${Math.min(i, 12)}">
+        <div class="strip"><span class="chip" aria-hidden="true">${cat.icon}</span><span class="cat">${esc(cat.label)}</span></div>
+        ${badges.length ? `<div class="badges">${badges.join("")}</div>` : ""}
+        <h3><a href="${esc(link)}" target="_blank" rel="noopener noreferrer" data-read="${key}">${esc(item.title)}</a></h3>
+        ${teaser ? `<p class="teaser">${esc(teaser)}</p>` : ""}
+        ${attn ? `<div class="alert-note">Keywords: ${esc(item.attention.join(", "))}</div>` : ""}
+        <div class="meta">
+          <span class="dot"></span><span class="src">${esc(item.source)}</span>
+          ${item.published ? `<span>· ${esc(timeAgo(item.published))}</span>` : ""}
+        </div>
+        <div class="kp" id="kp-${key}" aria-live="polite"><div></div></div>
+        <div class="card-actions">
+          <button type="button" class="kp-btn" data-kp="${key}" aria-expanded="false" aria-controls="kp-${key}"><span class="ico" aria-hidden="true"></span> Key points</button>
+          <button type="button" class="read-here" data-read="${key}"><span aria-hidden="true">📖</span> Read here</button>
+          <a class="open" href="${esc(link)}" target="_blank" rel="noopener noreferrer">Read article <span aria-hidden="true">→</span></a>
+        </div>
+      </article>`;
+  }
+
+  // Key points: free summary made by the server's code (no AI). Loaded on first tap.
+  const summaries = new Map();   // story link -> {points, from}
+  function renderPoints(box, data) {
+    const inner = box.firstElementChild;
+    inner.textContent = "";
+    const ol = document.createElement("ol");
+    for (const p of data.points) {
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      span.textContent = p;
+      li.append(span);
+      ol.append(li);
+    }
+    const note = document.createElement("div");
+    note.className = "kp-src";
+    note.textContent = data.from === "article" ? "Picked from the article text" : "From the short feed preview (article not readable)";
+    inner.append(ol, note);
+  }
+  async function toggleKeyPoints(btn, topic) {
+    const key = btn.dataset.kp;
+    const box = document.getElementById(`kp-${key}`);
+    if (!box) return;
+    if (box.classList.contains("open")) {
+      box.classList.remove("open");
+      fadeKp(box);
+      btn.setAttribute("aria-expanded", "false");
+      return;
+    }
+    const item = stories.get(key);
+    if (!item) return;
+    const sk = item.link;   // cached by link, so switching views keeps loaded key points
+    if (!summaries.has(sk)) {
+      const qs = new URLSearchParams({ url: item.link, title: item.title || "", snippet: item.snippet || "", topic: topic || "" });
+      try {
+        const data = await withBusy(btn, () => api(`/api/summary?${qs}`));
+        if (!data.points || !data.points.length) { toast("No key points could be made for this story."); return; }
+        summaries.set(sk, data);
+      } catch (err) { toast(err.message); return; }
+    }
+    if (!box.isConnected) return;   // list was redrawn while loading
+    renderPoints(box, summaries.get(sk));
+    clearTimeout(box._t); box.classList.remove("kp-out"); markMoving(320);
+    box.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+  }
+
+  const sectionFor = (name) => document.querySelector(`.topic[data-topic="${CSS.escape(name)}"]`);
+
+  // ---- View options (remembered on this device; works without storage too) ----
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch { /* storage blocked: just don't remember */ } }
+  };
+  const LIMITS = [5, 10, 20];
+  const view = {
+    compact: store.get("mynews.compact") === "1",
+    limit: LIMITS.includes(Number(store.get("mynews.limit"))) ? Number(store.get("mynews.limit")) : 10
+  };
+  const topicItems = new Map();   // topic -> items from /api/news (kept so view changes need no reload)
+
+  const needsAttention = (it) => !!(it.attention && it.attention.length);
+  // "Needs attention" first, then the rest; newest first inside each group.
+  function sortItems(items) {
+    const when = (it) => { const t = Date.parse(it.published); return isNaN(t) ? -Infinity : t; };
+    return items
+      .map((it, idx) => ({ it, idx }))
+      .sort((a, b) => (needsAttention(b.it) - needsAttention(a.it)) || (when(b.it) - when(a.it)) || (a.idx - b.idx))
+      .map((x) => x.it);
+  }
+
+  function renderTopic(name) {
+    const sec = sectionFor(name);
+    const items = topicItems.get(name);
+    if (!sec || !items) return;
+    const grid = sec.querySelector(".grid");
+    const count = sec.querySelector(".count");
+    for (const el of grid.querySelectorAll("button[data-read]")) stories.delete(el.dataset.read);
+    if (!items.length) {
+      grid.innerHTML = `<div class="empty">No headlines found right now. Try refreshing later.</div>`;
+      count.textContent = "0 stories";
+      return;
+    }
+    const shown = sortItems(items).slice(0, view.limit);
+    const alerts = items.filter(needsAttention).length;
+    grid.innerHTML = shown.map((it, i) => cardHtml(it, i, name)).join("");
+    markMoving(700);   // cards rise in (stagger ends ~0.64 s)
+    const n = items.length, word = n === 1 ? "story" : "stories";
+    const total = shown.length < n ? `${shown.length} of ${n} stories`
+      : n < view.limit ? `Showing all ${n} ${word} · ${n} of ${view.limit} found`
+      : `${n} ${word}`;
+    count.textContent = `${total}${alerts ? ` · ${alerts} need${alerts === 1 ? "s" : ""} attention` : ""}`;
+  }
+
+  function applyView(rerender) {
+    document.body.classList.toggle("compact", view.compact);
+    $("#compactBtn").setAttribute("aria-pressed", String(view.compact));
+    for (const b of document.querySelectorAll("#limitSeg [data-limit]")) {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.limit) === view.limit));
+    }
+    if (rerender) for (const name of topicItems.keys()) renderTopic(name);
+  }
+
+  $("#compactBtn").addEventListener("click", () => {
+    view.compact = !view.compact;
+    store.set("mynews.compact", view.compact ? "1" : "0");
+    applyView(true);
+  });
+  $("#limitSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-limit]");
+    if (!b) return;
+    const n = Number(b.dataset.limit);
+    if (!LIMITS.includes(n) || n === view.limit) return;
+    view.limit = n;
+    store.set("mynews.limit", String(n));
+    applyView(true);
+  });
+  applyView(false);
+
+  // ---- Night / Day toggle (remembered on this device; no choice = follow the phone) ----
+  const darkQuery = matchMedia("(prefers-color-scheme: dark)");
+  const currentTheme = () => {
+    const t = document.documentElement.getAttribute("data-theme");
+    return t === "dark" || t === "light" ? t : (darkQuery.matches ? "dark" : "light");
+  };
+  function updateThemeBtn() {
+    const next = currentTheme() === "dark" ? "light" : "dark";   // the button shows where it goes
+    const btn = $("#themeBtn");
+    const label = next === "dark" ? "Switch to night mode" : "Switch to day mode";
+    btn.querySelector(".theme-ico").textContent = next === "dark" ? "🌙" : "☀️";
+    btn.querySelector(".theme-txt").textContent = next === "dark" ? "Night" : "Day";
+    btn.setAttribute("aria-label", label);
+    btn.title = label;
+  }
+  $("#themeBtn").addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.classList.add("theme-swap");
+    document.documentElement.setAttribute("data-theme", next);
+    store.set("mynews.theme", next);
+    updateThemeBtn();
+    requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.remove("theme-swap")));
+  });
+  // If no choice was made, keep the button right when the phone switches modes.
+  const onSystemTheme = () => updateThemeBtn();
+  if (darkQuery.addEventListener) darkQuery.addEventListener("change", onSystemTheme);
+  else if (darkQuery.addListener) darkQuery.addListener(onSystemTheme);
+  updateThemeBtn();
+
+  async function loadTopic(name, force) {
+    const sec = sectionFor(name);
+    if (!sec) return;
+    const grid = sec.querySelector(".grid");
+    const count = sec.querySelector(".count");
+    for (const el of grid.querySelectorAll("button[data-read]")) stories.delete(el.dataset.read);
+    for (const it of topicItems.get(name) || []) summaries.delete(it.link);
+    topicItems.delete(name);
+    grid.innerHTML = `<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>`;
+    count.textContent = "Loading…";
+    loaded.add(name);
+    try {
+      const data = await api(`/api/news?topic=${encodeURIComponent(name)}${force ? "&refresh=1" : ""}`);
+      topicItems.set(name, Array.isArray(data.items) ? data.items : []);
+      renderTopic(name);
+    } catch (err) {
+      loaded.delete(name);
+      grid.innerHTML = `<div class="error">${esc(err.message)}</div>`;
+      count.textContent = "Could not load";
+    }
+  }
+
+  // macOS-style minimize: on close the grid shrinks into its banner, then hides.
+  // The "open" class stays the source of truth; the last tap always wins.
+  const calm = matchMedia("(prefers-reduced-motion: reduce)");
+  function animateGrid(grid, open) {
+    clearTimeout(grid._t);
+    if (grid._fx) { grid._fx.cancel(); grid._fx = null; }   // last tap wins: stop any running shrink
+    grid.classList.remove("closing", "opening");
+    if (calm.matches || !grid.animate || (!open && grid.hidden)) { grid.hidden = !open; return; }
+    grid.hidden = false;
+    markMoving(open ? 700 : 420);
+    if (open) {   // opening keeps the CSS "unfold" motion (.topic.open .grid)
+      grid.classList.add("opening");
+      grid._t = setTimeout(() => grid.classList.remove("opening"), 420);
+      return;
+    }
+    grid.classList.add("closing");
+    const fx = grid._fx = grid.animate(
+      [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-28px) scale(0.6, 0.08)" }],
+      { duration: 380, easing: "ease-in-out", fill: "forwards" });
+    fx.onfinish = () => {   // hide only when the shrink has really finished
+      if (grid._fx !== fx) return;
+      grid.hidden = true;
+      grid.classList.remove("closing");
+      grid._fx = null;
+      fx.cancel();
+    };
+  }
+
+  function setOpen(sec, open) {
+    const name = sec.dataset.topic;
+    sec.classList.toggle("open", open);
+    sec.querySelector(".toggle").setAttribute("aria-expanded", String(open));
+    animateGrid(sec.querySelector(".grid"), open);
+    if (open) openSet.add(name); else openSet.delete(name);
+    if (open && !loaded.has(name)) loadTopic(name, false);
+  }
+
+  function topicHtml(name, i) {
+    return `
+      <section class="topic" data-topic="${esc(name)}" style="${gradientFor(name)}">
+        <div class="topic-head">
+          <div class="title">
+            <h2><button class="toggle" type="button" aria-expanded="false" aria-controls="grid-${i}">
+              <span class="arrow" aria-hidden="true">›</span><span>${esc(name)}</span>
+            </button></h2>
+            <div class="count">Tap to show news</div>
+          </div>
+          <div class="actions">
+            <button type="button" data-refresh><span class="ico" aria-hidden="true"></span> Refresh</button>
+            <button type="button" data-remove>Remove</button>
+          </div>
+        </div>
+        <div class="grid" id="grid-${i}" hidden></div>
+      </section>`;
+  }
+
+  async function renderAll() {
+    const topics = await api("/api/topics");
+    const root = $("#topics");
+    loaded.clear();
+    topicItems.clear();
+    if (!topics.length) {
+      root.innerHTML = `<div class="hello"><h2>No topics yet</h2><p>Type a topic above and press Add topic.</p></div>`;
+      $("#status").textContent = "Nothing here yet";
+      return;
+    }
+    root.innerHTML = topics.map(topicHtml).join("");
+    $("#status").textContent = `${topics.length} topic${topics.length === 1 ? "" : "s"} · tap a topic to open it`;
+    for (const t of topics) if (openSet.has(t)) setOpen(sectionFor(t), true);
+  }
+
+  $("#addForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const input = $("#topicInput");
+    const btn = e.currentTarget.querySelector("button");
+    const name = input.value.trim();
+    if (!name) return;
+    try {
+      await withBusy(btn, () => api("/api/topics/add", { name }));
+      input.value = "";
+      toast(`Added “${name}”`);
+      openSet.add(name);   // open the new topic so you see its news right away
+      await renderAll();
+    } catch (err) { toast(err.message); }
+  });
+
+  $("#topics").addEventListener("click", async (e) => {
+    const sec = e.target.closest(".topic");
+    if (!sec) return;
+    const name = sec.dataset.topic;
+    const kpEl = e.target.closest("[data-kp]");
+    if (kpEl) { await toggleKeyPoints(kpEl, name); return; }
+    const readEl = e.target.closest("[data-read]");
+    if (readEl) {
+      // Ctrl/Cmd/Shift/middle click on the headline still opens the site in a new tab.
+      if (readEl.tagName === "A" && (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0)) return;
+      const item = stories.get(readEl.dataset.read);
+      if (item) { e.preventDefault(); openReader(item, name, readEl); }
+      return;
+    }
+    const refresh = e.target.closest("[data-refresh]");
+    const remove = e.target.closest("[data-remove]");
+    if (refresh) {
+      await withBusy(refresh, () => loadTopic(name, true));
+      if (!sec.classList.contains("open")) toast(`“${name}” refreshed — tap it to open`);
+    } else if (remove) {
+      if (!confirm(`Remove “${name}” from MyNews?`)) return;
+      try {
+        await withBusy(remove, () => api("/api/topics/remove", { name }));
+        openSet.delete(name);
+        toast(`Removed “${name}”`);
+        await renderAll();
+      } catch (err) { toast(err.message); }
+    } else if (e.target.closest(".topic-head")) {
+      setOpen(sec, !sec.classList.contains("open"));
+    }
+  });
+
+  $("#refreshAll").addEventListener("click", async () => {
+    const btn = $("#refreshAll");
+    try {
+      await withBusy(btn, async () => {
+        const topics = await api("/api/topics");
+        await Promise.all(topics.map((t) => {
+          const b = sectionFor(t)?.querySelector("[data-refresh]");
+          return b ? withBusy(b, () => loadTopic(t, true)) : loadTopic(t, true);
+        }));
+      });
+      toast("All topics refreshed");
+    } catch (err) { toast(err.message); }
+  });
+
+  // ---- Reader view: show the article's text inside MyNews ----
+  const reader = $("#reader");
+  let readerToken = 0;
+  let readerReturnFocus = null;
+  let readerCard = null, readerFx = 0;
+
+  function readerMeta(source, published, site) {
+    const meta = $("#rMeta");
+    meta.textContent = "";
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    const src = document.createElement("span");
+    src.className = "src";
+    src.textContent = source || site || "";
+    meta.append(dot, src);
+    const when = published ? timeAgo(published) : "";
+    if (when) meta.append(` · ${when}`);
+    if (site && source && site.toLowerCase() !== source.toLowerCase()) meta.append(` · ${site}`);
+  }
+
+  function openOriginalLink(href) {
+    const a = document.createElement("a");
+    a.className = "btn-link";
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = "Open original ↗";
+    return a;
+  }
+
+  function openReader(item, topic, opener) {
+    const token = ++readerToken;
+    const link = /^https:\/\//.test(item.link) ? item.link : "#";
+    readerReturnFocus = opener || document.activeElement;
+    readerCard = opener ? opener.closest(".card") : null;   // the reader minimizes back into this card
+    stopReaderFx(); reader.classList.remove("minimizing");
+    reader.setAttribute("style", gradientFor(topic || ""));
+    $("#rOpen").href = link;
+    $("#rTitle").textContent = item.title || "";
+    readerMeta(item.source, item.published, "");
+    const content = $("#rContent");
+    content.innerHTML = `<div class="r-loading"><div class="spinner" aria-hidden="true"></div><span>Loading article…</span></div>`;
+    reader.hidden = false;
+    markOpening(reader);
+    document.body.classList.add("reading");
+    $("#rBody").scrollTop = 0;
+    reader.querySelector(".sheet-bar [data-close]").focus();
+
+    if (link === "#") return showReaderError("This story has no secure link.", link, token);
+    fetch(`/api/article?url=${encodeURIComponent(link)}`)
+      .then(async (res) => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || `Error ${res.status}`);
+        return data;
+      })
+      .then((data) => {
+        if (token !== readerToken) return;   // the reader was closed or another story opened
+        const real = /^https:\/\//.test(data.url || "") ? data.url : link;
+        $("#rOpen").href = real;
+        if (data.title) $("#rTitle").textContent = data.title;
+        readerMeta(item.source, item.published, data.site);
+        content.textContent = "";
+        if (data.too_short) {
+          const note = document.createElement("p");
+          note.className = "r-note";
+          note.textContent = "⚠️ Only a little text could be read. This site probably blocks readers or needs JavaScript. Use Open original for the full story.";
+          content.append(note);
+        }
+        const text = document.createElement("div");
+        text.className = "r-text";
+        for (const para of data.paragraphs || []) {
+          const p = document.createElement("p");
+          p.textContent = para;
+          text.append(p);
+        }
+        content.append(text);
+        const end = document.createElement("div");
+        end.className = "r-end";
+        const host = document.createElement("span");
+        try { host.textContent = `From ${new URL(real).hostname.replace(/^www\./, "")} · pictures not shown`; } catch { host.textContent = ""; }
+        end.append(host, openOriginalLink(real));
+        content.append(end);
+      })
+      .catch((err) => showReaderError(err.message, link, token));
+  }
+
+  function showReaderError(msg, link, token) {
+    if (token !== readerToken) return;
+    const content = $("#rContent");
+    content.textContent = "";
+    const box = document.createElement("div");
+    box.className = "r-error";
+    const p = document.createElement("p");
+    p.textContent = `⛔ ${msg || "Could not read this article."}`;
+    box.append(p);
+    if (link !== "#") box.append(openOriginalLink(link));
+    content.append(box);
+  }
+
+  function closeReader() {
+    if (reader.hidden || reader.classList.contains("minimizing")) return;
+    readerToken++;
+    minimizeReader();
+    document.body.classList.remove("reading");
+    if (readerReturnFocus && document.contains(readerReturnFocus)) readerReturnFocus.focus();
+    readerReturnFocus = null;
+  }
+
+  // Shrink and fade the reader toward its story card (or the bottom-center, like the dock), then hide it.
+  function minimizeReader() {
+    const sheet = reader.querySelector(".sheet");
+    if (calm.matches || !sheet || !sheet.animate) { reader.hidden = true; return; }
+    const s = sheet.getBoundingClientRect();
+    const c = readerCard && readerCard.isConnected ? readerCard.getBoundingClientRect() : null;
+    const ok = c && c.width > 0 && c.bottom > 0 && c.top < innerHeight;
+    const cx = ok ? c.left + c.width / 2 : innerWidth / 2;
+    const cy = ok ? c.top + c.height / 2 : innerHeight;
+    const dx = cx - (s.left + s.width / 2), dy = cy - (s.top + s.height / 2);
+    const ds = ok ? Math.min(0.6, Math.max(0.08, c.width / s.width)).toFixed(3) : "0.1";
+    reader.classList.add("minimizing");
+    markMoving(420);
+    const t = { duration: 400, easing: "ease-in-out", fill: "forwards" };
+    const a = sheet.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: `translate(${dx}px, ${dy}px) scale(${ds})` }], t);
+    const back = reader.querySelector(".reader-backdrop");
+    readerFx = [a, back && back.animate([{ opacity: 1 }, { opacity: 0 }], t)];
+    a.onfinish = () => {   // hide only when the shrink has really finished
+      if (!readerFx || readerFx[0] !== a) return;
+      reader.classList.remove("minimizing");
+      reader.hidden = true;
+      stopReaderFx();
+    };
+  }
+  function stopReaderFx() {
+    if (readerFx) for (const fx of readerFx) if (fx) fx.cancel();
+    readerFx = null;
+  }
+
+  // Reader/Settings opening: no backdrop blur until the sheet has slid in.
+  function markOpening(box) {
+    if (calm.matches) return;
+    box.classList.add("opening");
+    clearTimeout(box._t);
+    box._t = setTimeout(() => box.classList.remove("opening"), 340);
+    markMoving(340);
+  }
+  // Settings closing: slide down + fade (transform/opacity only), then hide.
+  function sheetOut(box) {
+    const sheet = box.querySelector(".sheet"), back = box.querySelector(".reader-backdrop");
+    if (calm.matches || !sheet || !sheet.animate) { box.hidden = true; return; }
+    box.classList.remove("opening");
+    box.classList.add("minimizing");
+    markMoving(260);
+    const t = { duration: 240, easing: "ease-in", fill: "forwards" };
+    const a = sheet.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(24px) scale(0.98)" }], t);
+    box._fx = [a, back && back.animate([{ opacity: 1 }, { opacity: 0 }], t)];
+    a.onfinish = () => { if (box._fx && box._fx[0] === a) { box.hidden = true; stopSheetFx(box); } };
+  }
+  function stopSheetFx(box) {
+    if (box._fx) for (const fx of box._fx) if (fx) fx.cancel();
+    box._fx = null;
+    box.classList.remove("minimizing");
+  }
+  // Key points closing: keep the box in place while its content fades, then fold it in one step.
+  function fadeKp(box) {
+    if (calm.matches) return;
+    box.classList.add("kp-out");
+    clearTimeout(box._t);
+    box._t = setTimeout(() => box.classList.remove("kp-out"), 220);
+    markMoving(240);
+  }
+
+  reader.addEventListener("click", (e) => {
+    if (e.target.closest("[data-close]")) closeReader();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (reader.hidden) return;
+    if (e.key === "Escape") { e.preventDefault(); closeReader(); return; }
+    if (e.key === "Tab") {   // keep keyboard focus inside the reader
+      const items = [...reader.querySelectorAll(".sheet button, .sheet a[href]")];
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  // 3D tilt toward the mouse (mouse only; off for touch and reduced motion).
+  (() => {
+    const root = $("#topics");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+    let cur = null, frame = 0, last = null;
+    const reset = (el) => {
+      if (!el) return;
+      for (const p of ["--rx", "--ry", "--mx", "--my"]) el.style.removeProperty(p);
+    };
+    const apply = () => {
+      frame = 0;
+      const e = last;
+      const el = e.target instanceof Element ? e.target.closest(".card:not(.row), .topic-head") : null;   // no tilt on compact rows
+      if (el !== cur) { reset(cur); cur = el; }
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const px = Math.min(Math.max((e.clientX - r.left) / r.width, 0), 1);
+      const py = Math.min(Math.max((e.clientY - r.top) / r.height, 0), 1);
+      const max = el.classList.contains("card") ? 7 : 3;   // banners are wide, so tilt less
+      el.style.setProperty("--ry", `${((px - 0.5) * 2 * max).toFixed(2)}deg`);
+      el.style.setProperty("--rx", `${(-(py - 0.5) * 2 * max).toFixed(2)}deg`);
+      el.style.setProperty("--mx", `${(px * 100).toFixed(1)}%`);
+      el.style.setProperty("--my", `${(py * 100).toFixed(1)}%`);
+    };
+    root.addEventListener("pointermove", (e) => {
+      if (e.pointerType !== "mouse" || reduce.matches) return;
+      last = e;
+      if (!frame) frame = requestAnimationFrame(apply);
+    });
+    root.addEventListener("pointerleave", () => {
+      if (frame) { cancelAnimationFrame(frame); frame = 0; }
+      reset(cur); cur = null;
+    });
+  })();
+
+  // ---- Settings (saved on the server in settings.json) ----
+  const settingsBox = $("#settings");
+  let settings = null;
+  let settingsReturnFocus = null;
+
+  const clock = (iso) => {
+    const t = Date.parse(iso);
+    return isNaN(t) ? "" : new Date(t).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  };
+  function untilText(iso) {
+    const t = Date.parse(iso);
+    if (isNaN(t)) return "";
+    const mins = Math.max(0, Math.round((t - Date.now()) / 60000));
+    return mins < 1 ? "any moment" : `in ${mins} min`;
+  }
+
+  function showSettings(s) {
+    settings = s;
+    for (const b of document.querySelectorAll("#intervalSeg [data-interval]")) {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.interval) === s.interval));
+    }
+    for (const b of document.querySelectorAll("#pushSeg [data-push]")) {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.push) === s.per_push));
+    }
+    $("#notifySwitch").setAttribute("aria-checked", String(!!s.notify));
+    $("#notifyHint").textContent = s.notify
+      ? "On. New “⚠️ Needs attention” stories are sent to the ntfy app."
+      : "Off. Nothing is sent.";
+    $("#ntfyTopic").value = s.ntfy_topic || "";
+    const next = s.next_refresh ? `Next refresh ${clock(s.next_refresh)} (${untilText(s.next_refresh)})` : "";
+    $("#nextChip").textContent = next ? `⏱ ${next}` : "";
+    $("#sNext").textContent = next;
+    const foot = [];
+    if (s.last_refresh) foot.push(`Last background refresh: ${clock(s.last_refresh)}`);
+    if (s.pending) foot.push(`${s.pending} alert${s.pending === 1 ? "" : "s"} waiting to be sent (retried automatically)`);
+    $("#sFoot").textContent = "";
+    for (const line of foot) {
+      const d = document.createElement("div");
+      d.textContent = line;
+      $("#sFoot").append(d);
+    }
+  }
+
+  async function loadSettings() {
+    try { showSettings(await api("/api/settings")); } catch { /* server busy: try again later */ }
+  }
+
+  async function saveSetting(btn, change, okMsg) {
+    try {
+      const s = await withBusy(btn, () => api("/api/settings", change));
+      showSettings(s);
+      toast(okMsg);
+    } catch (err) {
+      toast(err.message);
+      if (settings) showSettings(settings);   // put the buttons back as they were
+    }
+  }
+
+  function openSettings() {
+    stopSheetFx(settingsBox);
+    settingsReturnFocus = document.activeElement;
+    settingsBox.hidden = false;
+    markOpening(settingsBox);
+    document.body.classList.add("reading");
+    settingsBox.querySelector(".sheet-bar [data-sclose]").focus();
+    loadSettings();
+  }
+  function closeSettings() {
+    if (settingsBox.hidden || settingsBox.classList.contains("minimizing")) return;
+    sheetOut(settingsBox);
+    if (reader.hidden) document.body.classList.remove("reading");
+    if (settingsReturnFocus && document.contains(settingsReturnFocus)) settingsReturnFocus.focus();
+    settingsReturnFocus = null;
+  }
+
+  $("#settingsBtn").addEventListener("click", openSettings);
+  settingsBox.addEventListener("click", (e) => {
+    if (e.target.closest("[data-sclose]")) closeSettings();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (settingsBox.hidden) return;
+    if (e.key === "Escape") { e.preventDefault(); closeSettings(); return; }
+    if (e.key === "Tab") {   // keep keyboard focus inside the settings panel
+      const items = [...settingsBox.querySelectorAll(".sheet button, .sheet input")];
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  $("#intervalSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-interval]");
+    const n = b ? Number(b.dataset.interval) : 0;
+    if (!b || !settings || n === settings.interval) return;
+    saveSetting(b, { interval: n }, `Saved: refresh every ${n} min`);
+  });
+  $("#pushSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-push]");
+    const n = b ? Number(b.dataset.push) : 0;
+    if (!b || !settings || n === settings.per_push) return;
+    saveSetting(b, { per_push: n }, `Saved: up to ${n} alert${n === 1 ? "" : "s"} per topic each push`);
+  });
+  $("#notifySwitch").addEventListener("click", (e) => {
+    if (!settings) return;
+    const on = !settings.notify;
+    saveSetting(e.currentTarget, { notify: on },
+      on ? "Notifications on. Only new alerts from now on are sent." : "Notifications off");
+  });
+  $("#copyTopic").addEventListener("click", async () => {
+    const input = $("#ntfyTopic");
+    if (!input.value) return;
+    try {
+      await navigator.clipboard.writeText(input.value);
+      toast("Topic copied");
+    } catch {
+      input.focus();
+      input.select();
+      try { input.setSelectionRange(0, input.value.length); } catch { /* old browser */ }
+      toast("Topic selected — copy it from the menu");
+    }
+  });
+  $("#regenTopic").addEventListener("click", (e) => {
+    if (!confirm("Make a new ntfy topic? The old one stops getting alerts, so you must subscribe to the new one in the ntfy app.")) return;
+    saveSetting(e.currentTarget, { regenerate: true }, "New topic made — subscribe to it in the ntfy app");
+  });
+  // Send one test message to the saved topic (changes no settings).
+  $("#ntfyTest").addEventListener("click", async (e) => {
+    const btn = e.currentTarget, out = $("#testStatus");
+    if (btn.disabled) return;
+    out.className = "hint test-status";
+    out.textContent = "Sending…";
+    let ok = false, msg = "Could not reach MyNews";
+    await withBusy(btn, async () => {
+      try {
+        const res = await fetch("/api/ntfy/test", {
+          method: "POST", headers: { "Content-Type": "application/json" }, body: "{}"
+        });
+        const data = await res.json();
+        if (res.ok && data && data.ok) { ok = true; msg = `Sent to ${data.topic}`; }
+        else msg = (data && typeof data.error === "string" && data.error) || `Error ${res.status}`;
+      } catch { msg = "Could not reach MyNews"; }
+    });
+    out.className = "hint test-status " + (ok ? "ok" : "bad");
+    out.textContent = msg;
+  });
+
+  loadSettings();
+  setInterval(() => { if (!document.hidden) loadSettings(); }, 60000);
+
+  renderAll().catch((err) => {
+    $("#status").textContent = "Could not load";
+    toast(err.message);
+  });
+</script>
+<script>
+(function () {
+  if (!window.matchMedia) return;
+  var q = matchMedia("(prefers-reduced-motion: reduce)"), h = document.getElementById("motionHint");
+  if (!h) return;
+  function f() { h.hidden = !q.matches; }
+  f();
+  if (q.addEventListener) q.addEventListener("change", f); else if (q.addListener) q.addListener(f);
+})();
+</script>
+</body>
+</html>

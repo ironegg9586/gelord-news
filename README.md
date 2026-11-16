@@ -37,7 +37,7 @@ On iPhone or iPad, use iSH with `apk add python3 curl bash git` (see the iSH sec
 
 ## Install
 
-1. Download this repo (for example `git clone https://github.com/<you>/gelord-news` or the ZIP from the Releases page).
+1. Download this repo (for example `git clone https://github.com/ironegg9586/gelord-news` or the ZIP from the Releases page).
 2. Go into the folder and run the installer:
    ```
    cd gelord-news
@@ -65,7 +65,7 @@ On iPhone or iPad, use iSH with `apk add python3 curl bash git` (see the iSH sec
 
 iSH is a free app that gives your iPhone or iPad a small Linux terminal. Type each command exactly as shown, then press Return.
 
-1. Install **iSH** from the App Store (free). It works on iPhone and iPad.
+1. Install [**iSH**](https://apps.apple.com/app/id1436902243) from the App Store (free). It works on iPhone and iPad.
 2. Open iSH and update its packages:
    ```
    apk update
@@ -76,7 +76,7 @@ iSH is a free app that gives your iPhone or iPad a small Linux terminal. Type ea
    ```
 4. Get the app:
    ```
-   git clone https://github.com/<you>/gelord-news
+   git clone https://github.com/ironegg9586/gelord-news
    cd gelord-news
    ```
    Without git: download the repo as a ZIP from GitHub, then in iSH run `wget <ZIP link>` (or `curl -L -o news.zip <ZIP link>`), `unzip` it, and `cd` into the folder.

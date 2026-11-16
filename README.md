@@ -1,6 +1,6 @@
 # Gelord x News (gelord-news)
 
-**Version: v1.0.0**
+**Version: v1.0.1**
 
 A small news page that runs on your own phone in Termux. You pick the topics, it shows the latest headlines at **http://localhost:8888**.
 
@@ -163,4 +163,4 @@ ntfy is a free service that sends alerts to your phone. No account is needed. Ta
 
 ## About
 
-v1.0.0 - No AI, no paid service, no account needed.
+v1.0.1 - No AI, no paid service, no account needed.

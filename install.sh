@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# gelord-news installer (v1.0.0)
+# gelord-news installer (v1.0.1)
 # Copies the app into ~/MyNews and can start it at http://localhost:8888.
 # No AI, no paid services. The only network use is an optional "pkg install"
 # that runs ONLY if you say yes.
